@@ -1,13 +1,5 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene format=1]
 
-[ext_resource path="res://assets/graveyardtilesetnew/BG.png" type="Texture" id=1]
-
-[node name="Sprite" type="Sprite"]
-
-[node name="BG" type="Sprite" parent="."]
-
-transform/scale = Vector2( 0.53, 0.53 )
-texture = ExtResource( 1 )
-centered = false
+[node name="main" type="Node"]
 
 
