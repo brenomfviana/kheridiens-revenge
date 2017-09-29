@@ -11,25 +11,28 @@ extents = Vector2( 10, 10 )
 [node name="ninja" type="Node2D"]
 
 script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Sprite" type="Sprite" parent="."]
-
-transform/scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 2 )
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="body" type="KinematicBody2D" parent="."]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.5, 0, 0, 3, 0, 0 )
+shapes/0/transform = Matrix32( 1.28331, 0, 0, 3.26906, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="sprite" type="Sprite" parent="body"]
 
-transform/scale = Vector2( 1.5, 3 )
+transform/scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+
+transform/scale = Vector2( 1.28331, 3.26906 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0

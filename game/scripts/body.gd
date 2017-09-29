@@ -1,8 +1,7 @@
-#!
-# This script is responsible for ninja behaviors.
-#
-extends Node2D
+extends KinematicBody2D
 
+# Gravity
+const GRAVITY = 2
 # Ninja's speed
 const NORMAL_SPEED = 10
 const SPEED_TO_RUN = 50
@@ -18,16 +17,26 @@ func _fixed_process(delta):
 	# Ninja Attack
 	#
 	# Ninja movement
-	move(delta)
+	move()
 
-func move(delta):
+func move():
 	""" Ninja movement. """
 	var movement = Vector2(0, 0)
 	# Check if the keys pressed
 	if Input.is_action_pressed("ui_right"):
-		movement.x += NORMAL_SPEED * delta
+		movement.x += NORMAL_SPEED
 		get_node("body/sprite").set_flip_h(false)
 	if Input.is_action_pressed("ui_left"):
-		movement.x -= NORMAL_SPEED * delta
+		movement.x -= NORMAL_SPEED
 		get_node("body/sprite").set_flip_h(true)
-	
+	if Input.is_action_pressed("ui_up"):
+		movement.y -= NORMAL_SPEED
+	if Input.is_action_pressed("ui_down"):
+		movement.y += NORMAL_SPEED
+	# Check collision
+	if (!get_node("body").is_colliding()):
+		# Update position
+		# get_node("body").move(self.get_pos() + movement)
+		pass
+	else:
+		print(true)
