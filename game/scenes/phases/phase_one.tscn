@@ -13,73 +13,73 @@ script/script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1.10803, 3.09824 )
+transform/pos = Vector2( 1.10803, 3.09827 )
 transform/scale = Vector2( 0.53, 0.53 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="ninja" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 31.7465, 509.688 )
+transform/pos = Vector2( 23.0135, 510.272 )
 
 [node name="tile2" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 31.025, 574.961 )
+transform/pos = Vector2( 31.025, 575 )
 
 [node name="tile22" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 95.0036, 575.094 )
+transform/pos = Vector2( 95.0036, 575 )
 
 [node name="tile23" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 158.71, 575.129 )
+transform/pos = Vector2( 158.71, 575 )
 
 [node name="tile24" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 222.571, 575.326 )
+transform/pos = Vector2( 222.571, 575 )
 
 [node name="tile3" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 286.281, 575.433 )
+transform/pos = Vector2( 286.281, 575 )
 
 [node name="tile1" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 479.678, 576.021 )
+transform/pos = Vector2( 480.678, 575 )
 
 [node name="tile25" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 544.157, 576.119 )
+transform/pos = Vector2( 544.157, 575 )
 
 [node name="tile26" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 608.018, 576.316 )
+transform/pos = Vector2( 608.018, 575 )
 
 [node name="tile27" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 671.706, 576.316 )
+transform/pos = Vector2( 671.706, 575 )
 
 [node name="tile28" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 735.405, 575.643 )
+transform/pos = Vector2( 735.405, 575 )
 
 [node name="tile29" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 798.766, 576.306 )
+transform/pos = Vector2( 798.766, 575 )
 
 [node name="tile30" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 862.781, 575.633 )
+transform/pos = Vector2( 862.781, 575 )
 
 [node name="tile31" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 927.133, 575.633 )
+transform/pos = Vector2( 926.133, 575 )
 
 [node name="tile32" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 989.495, 575.633 )
+transform/pos = Vector2( 990.495, 575 )
 
 [node name="tile33" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 1053.85, 575.633 )
+transform/pos = Vector2( 1053.85, 575 )
 
 
