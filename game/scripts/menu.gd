@@ -3,8 +3,9 @@ extends Node
 func _ready():
 	""" Called every time the node is added to the scene.
 	    Initialization here. """
-	get_node("panel/ninja").play("anim")
-	get_node("panel/zombie").play("anim")
+	# get_node("panel/ninja").play("anim")
+	# get_node("panel/zombie1").play("anim")
+	# get_node("panel/zombie2").play("anim")
 	set_process(true)
 
 func _process(delta):

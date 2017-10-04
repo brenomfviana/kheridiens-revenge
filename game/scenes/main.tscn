@@ -63,29 +63,38 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 280.0
-margin/top = 68.0
-margin/right = 392.0
-margin/bottom = 82.0
+margin/left = 373.0
+margin/top = 141.0
+margin/right = 439.0
+margin/bottom = 172.0
 custom_colors/font_color = Color( 0.0547059, 0.0546875, 0.0546875, 1 )
 custom_colors/font_color_shadow = Color( 0.621094, 0.621094, 0.621094, 1 )
-text = "Ninja VS Zombies"
+text = "Qeridien's
+  Revenge"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
 [node name="ninja" type="AnimatedSprite" parent="panel"]
 
-transform/pos = Vector2( 422.811, 284.213 )
+transform/pos = Vector2( 166.397, 434.766 )
 transform/scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "anim"
 frame = 4
 
-[node name="zombie" type="AnimatedSprite" parent="panel"]
+[node name="zombie1" type="AnimatedSprite" parent="panel"]
 
-transform/pos = Vector2( 641.645, 265.102 )
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( 485.363, 428.571 )
+transform/scale = Vector2( 0.35, 0.35 )
+frames = SubResource( 2 )
+animation = "anim"
+flip_h = true
+
+[node name="zombie2" type="AnimatedSprite" parent="panel"]
+
+transform/pos = Vector2( 627.648, 410.765 )
+transform/scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 2 )
 animation = "anim"
 flip_h = true
@@ -97,14 +106,48 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 440.0
-margin/top = 425.0
-margin/right = 481.0
-margin/bottom = 445.0
+margin/left = 867.0
+margin/top = 275.0
+margin/right = 908.0
+margin/bottom = 295.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Start"
+flat = false
+
+[node name="credits" type="Button" parent="panel"]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 818.0
+margin/top = 420.0
+margin/right = 875.0
+margin/bottom = 440.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Credits"
+flat = false
+
+[node name="instructions" type="Button" parent="panel"]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 723.0
+margin/top = 347.0
+margin/right = 812.0
+margin/bottom = 367.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Instructions"
 flat = false
 
 [node name="quit_game" type="Button" parent="panel"]
@@ -114,10 +157,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 440.0
-margin/top = 496.0
-margin/right = 480.0
-margin/bottom = 516.0
+margin/left = 868.0
+margin/top = 493.0
+margin/right = 908.0
+margin/bottom = 513.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
