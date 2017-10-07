@@ -88,6 +88,6 @@ transform/pos = Vector2( 1053.85, 575 )
 
 [node name="male_zombie" parent="." instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 622.865, 505.027 )
+transform/pos = Vector2( 578.403, 508.548 )
 
 
