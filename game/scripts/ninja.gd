@@ -57,7 +57,8 @@ func _fixed_process(delta):
 		get_node("player_sprite").play("jumping")
 	elif(running):
 		get_node("player_sprite").play("running")
-	elif(stopped || velocity.x == 0):
+	#elif(stopped || velocity.x == 0):
+	else:
 		get_node("player_sprite").play("stopped")
 
 func _input(event):
@@ -86,7 +87,7 @@ func _input(event):
 		if(!jumping):
 			if(event.is_action_pressed("ui_up")):
 				velocity.y -= JUMP_FORCE
-				running = false
+				#running = false
 				stopped = false
 				jumping = true
 		if(event.is_action_pressed("ui_down")):
