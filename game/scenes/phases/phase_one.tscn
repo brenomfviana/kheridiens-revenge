@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://scripts/phase_one.gd" type="Script" id=1]
 [ext_resource path="res://assets/graveyardtilesetnew/BG.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/terrains/tile2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/terrains/tile1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/info.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/enemies/male_zombie.tscn" type="PackedScene" id=8]
 
 [node name="phase_one" type="Node"]
 
@@ -84,5 +85,9 @@ transform/pos = Vector2( 990.495, 575 )
 transform/pos = Vector2( 1053.85, 575 )
 
 [node name="info" parent="." instance=ExtResource( 7 )]
+
+[node name="male_zombie" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 622.865, 505.027 )
 
 
