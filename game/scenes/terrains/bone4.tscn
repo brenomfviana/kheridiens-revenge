@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/graveyardtilesetnew/Tiles/Bone__4.png" type="Texture" id=1]
+
+[node name="bone4" type="Node2D"]
+
+editor/display_folded = true
+
+[node name="sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+
