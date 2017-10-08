@@ -40,19 +40,20 @@ centered = false
 
 [node name="ninja" type="Sprite" parent="panel/background"]
 
-transform/pos = Vector2( 316.246, 855.595 )
+transform/pos = Vector2( 454.135, 774.52 )
+transform/scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 3 )
 
 [node name="zombie1" type="Sprite" parent="panel/background"]
 
-transform/pos = Vector2( 928.048, 752.234 )
+transform/pos = Vector2( 915.617, 738.3 )
 transform/scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 4 )
 flip_h = true
 
 [node name="zombie2" type="Sprite" parent="panel/background"]
 
-transform/pos = Vector2( 1238.38, 821.141 )
+transform/pos = Vector2( 1248.73, 791.773 )
 transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 flip_h = true
@@ -65,9 +66,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 373.0
-margin/top = 141.0
+margin/top = 154.0
 margin/right = 439.0
-margin/bottom = 172.0
+margin/bottom = 185.0
 custom_colors/font_color = Color( 0.0547059, 0.0546875, 0.0546875, 1 )
 custom_colors/font_color_shadow = Color( 0.621094, 0.621094, 0.621094, 1 )
 text = "Qeridien's
@@ -93,23 +94,6 @@ shortcut = null
 text = "Start"
 flat = false
 
-[node name="credits" type="Button" parent="panel"]
-
-rect/scale = Vector2( 3, 3 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 818.0
-margin/top = 420.0
-margin/right = 875.0
-margin/bottom = 440.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Credits"
-flat = false
-
 [node name="instructions" type="Button" parent="panel"]
 
 rect/scale = Vector2( 3, 3 )
@@ -125,6 +109,23 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Instructions"
+flat = false
+
+[node name="credits" type="Button" parent="panel"]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 818.0
+margin/top = 420.0
+margin/right = 875.0
+margin/bottom = 440.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Credits"
 flat = false
 
 [node name="quit_game" type="Button" parent="panel"]
