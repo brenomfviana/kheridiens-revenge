@@ -1,5 +1,7 @@
 # Qeridien's Revenge
 
+<center><img src="img/qeridiens-revenge.png" width="500"/></center>
+
 ## Description
 
 This is a work from the Mechanics and Balance of Games course.
