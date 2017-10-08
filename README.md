@@ -1,6 +1,6 @@
 # Qeridien's Revenge
 
-<center><img src="img/qeridiens-revenge.png" width="500"/></center>
+<p align="center"><img src="img/qeridiens-revenge.png" width="500"/></p>
 
 ## Description
 
