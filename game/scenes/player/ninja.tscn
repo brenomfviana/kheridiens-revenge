@@ -44,7 +44,7 @@ animations = [ {
 "frames": [ ExtResource( 22 ) ],
 "loop": true,
 "name": "jumping",
-"speed": 5.0
+"speed": 4.0
 } ]
 
 [node name="body" type="KinematicBody2D"]

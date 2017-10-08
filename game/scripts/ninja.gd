@@ -43,8 +43,7 @@ func _fixed_process(delta):
 	velocity.x = lerp(velocity.x, SPEED * direction, 0.1)
 	var motion = velocity * delta
 	move(motion)
-	print(velocity)
-	# Is in the 
+	# Cehck if the player is on the ground
 	if(is_colliding()):
 		jumping = false
 		velocity.y = 0
