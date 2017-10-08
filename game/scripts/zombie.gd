@@ -3,7 +3,7 @@ extends KinematicBody2D
 # Constants
 const GRAVITY   = 2000.0
 const SPEED     = 15
-const MAX_STEPS = 100
+const MAX_STEPS = 120
 
 # Animations
 var initial_position
