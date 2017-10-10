@@ -1,29 +1,28 @@
-[gd_scene load_steps=27 format=1]
+[gd_scene load_steps=26 format=1]
 
 [ext_resource path="res://scripts/ninja.gd" type="Script" id=1]
-[ext_resource path="res://assets/ninjaman/Run__000.png" type="Texture" id=2]
-[ext_resource path="res://assets/ninjaman/Run__001.png" type="Texture" id=3]
-[ext_resource path="res://assets/ninjaman/Run__002.png" type="Texture" id=4]
-[ext_resource path="res://assets/ninjaman/Run__003.png" type="Texture" id=5]
-[ext_resource path="res://assets/ninjaman/Run__004.png" type="Texture" id=6]
-[ext_resource path="res://assets/ninjaman/Run__005.png" type="Texture" id=7]
-[ext_resource path="res://assets/ninjaman/Run__006.png" type="Texture" id=8]
-[ext_resource path="res://assets/ninjaman/Run__007.png" type="Texture" id=9]
-[ext_resource path="res://assets/ninjaman/Run__008.png" type="Texture" id=10]
-[ext_resource path="res://assets/ninjaman/Run__009.png" type="Texture" id=11]
-[ext_resource path="res://assets/ninjaman/Idle__000.png" type="Texture" id=12]
-[ext_resource path="res://assets/ninjaman/Idle__001.png" type="Texture" id=13]
-[ext_resource path="res://assets/ninjaman/Idle__002.png" type="Texture" id=14]
-[ext_resource path="res://assets/ninjaman/Idle__003.png" type="Texture" id=15]
-[ext_resource path="res://assets/ninjaman/Idle__004.png" type="Texture" id=16]
-[ext_resource path="res://assets/ninjaman/Idle__005.png" type="Texture" id=17]
-[ext_resource path="res://assets/ninjaman/Idle__006.png" type="Texture" id=18]
-[ext_resource path="res://assets/ninjaman/Idle__007.png" type="Texture" id=19]
-[ext_resource path="res://assets/ninjaman/Idle__008.png" type="Texture" id=20]
-[ext_resource path="res://assets/ninjaman/Idle__009.png" type="Texture" id=21]
-[ext_resource path="res://assets/ninjaman/Jump__006.png" type="Texture" id=22]
-[ext_resource path="res://scripts/camera.gd" type="Script" id=23]
-[ext_resource path="res://scenes/info.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/info.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/ninjaman/Run__000.png" type="Texture" id=3]
+[ext_resource path="res://assets/ninjaman/Run__001.png" type="Texture" id=4]
+[ext_resource path="res://assets/ninjaman/Run__002.png" type="Texture" id=5]
+[ext_resource path="res://assets/ninjaman/Run__003.png" type="Texture" id=6]
+[ext_resource path="res://assets/ninjaman/Run__004.png" type="Texture" id=7]
+[ext_resource path="res://assets/ninjaman/Run__005.png" type="Texture" id=8]
+[ext_resource path="res://assets/ninjaman/Run__006.png" type="Texture" id=9]
+[ext_resource path="res://assets/ninjaman/Run__007.png" type="Texture" id=10]
+[ext_resource path="res://assets/ninjaman/Run__008.png" type="Texture" id=11]
+[ext_resource path="res://assets/ninjaman/Run__009.png" type="Texture" id=12]
+[ext_resource path="res://assets/ninjaman/Idle__000.png" type="Texture" id=13]
+[ext_resource path="res://assets/ninjaman/Idle__001.png" type="Texture" id=14]
+[ext_resource path="res://assets/ninjaman/Idle__002.png" type="Texture" id=15]
+[ext_resource path="res://assets/ninjaman/Idle__003.png" type="Texture" id=16]
+[ext_resource path="res://assets/ninjaman/Idle__004.png" type="Texture" id=17]
+[ext_resource path="res://assets/ninjaman/Idle__005.png" type="Texture" id=18]
+[ext_resource path="res://assets/ninjaman/Idle__006.png" type="Texture" id=19]
+[ext_resource path="res://assets/ninjaman/Idle__007.png" type="Texture" id=20]
+[ext_resource path="res://assets/ninjaman/Idle__008.png" type="Texture" id=21]
+[ext_resource path="res://assets/ninjaman/Idle__009.png" type="Texture" id=22]
+[ext_resource path="res://assets/ninjaman/Jump__006.png" type="Texture" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -33,17 +32,17 @@ extents = Vector2( 10, 10 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "running",
 "speed": 25.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "stopped",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ) ],
+"frames": [ ExtResource( 23 ) ],
 "loop": true,
 "name": "jumping",
 "speed": 4.0
@@ -59,20 +58,6 @@ collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-transform/scale = Vector2( 1.28331, 3.26906 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
-[node name="player_sprite" type="AnimatedSprite" parent="."]
-
-transform/scale = Vector2( 0.15, 0.15 )
-frames = SubResource( 2 )
-animation = "stopped"
-frame = 3
 
 [node name="camera" type="Camera2D" parent="."]
 
@@ -92,7 +77,6 @@ drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
-script/script = ExtResource( 23 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -104,6 +88,20 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="info" parent="camera/CanvasLayer" instance=ExtResource( 24 )]
+[node name="info" parent="camera/CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/scale = Vector2( 1.28331, 3.26906 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="player_sprite" type="AnimatedSprite" parent="."]
+
+transform/scale = Vector2( 0.15, 0.15 )
+frames = SubResource( 2 )
+animation = "stopped"
+frame = 3
 
 

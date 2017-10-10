@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=23 format=1]
 
 [ext_resource path="res://assets/graveyardtilesetnew/BG.png" type="Texture" id=1]
 [ext_resource path="res://scenes/terrains/tile3.tscn" type="PackedScene" id=2]
@@ -11,157 +11,199 @@
 [ext_resource path="res://scenes/terrains/tile11.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/terrains/bone1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/terrains/bone3.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/terrains/tile14.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/terrains/tile16.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/enemies/male_zombie.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/enemies/female_zombie.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/player/ninja.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/terrains/wall.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/terrains/floor.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/terrains/wall.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/terrains/floor.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/terrains/bush2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/terrains/bush1.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/terrains/tree.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/terrains/arrow_sign.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/terrains/skeleton.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/terrains/tomb_stone1.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/enemies/male_zombie.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/enemies/female_zombie.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/player/ninja.tscn" type="PackedScene" id=22]
 
 [node name="phase_one" type="Node"]
 
-[node name="Background" type="Sprite" parent="."]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
-transform/pos = Vector2( 1.10803, 0.0982699 )
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="ParallaxLayer"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="Background" type="Sprite" parent="ParallaxLayer/ParallaxBackground"]
+
+transform/pos = Vector2( 1.10797, 1.17899 )
 transform/scale = Vector2( 0.53, 0.53 )
 texture = ExtResource( 1 )
 centered = false
 
-[node name="tile1" parent="." instance=ExtResource( 2 )]
+[node name="terrain" type="Node2D" parent="."]
+
+[node name="tile1" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 31.025, 575 )
 
-[node name="tile2" parent="." instance=ExtResource( 2 )]
+[node name="tile2" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 95.0036, 575 )
 
-[node name="tile3" parent="." instance=ExtResource( 2 )]
+[node name="tile3" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 158.71, 575 )
 
-[node name="tile4" parent="." instance=ExtResource( 2 )]
+[node name="tile4" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 222.571, 575 )
 
-[node name="tile5" parent="." instance=ExtResource( 3 )]
+[node name="tile5" parent="terrain" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 286.281, 575 )
 
-[node name="tile6" parent="." instance=ExtResource( 4 )]
+[node name="tile6" parent="terrain" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 480.678, 575 )
 
-[node name="tile7" parent="." instance=ExtResource( 2 )]
+[node name="tile7" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 544.157, 575 )
 
-[node name="tile8" parent="." instance=ExtResource( 2 )]
+[node name="tile8" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 607.901, 575 )
 
-[node name="tile9" parent="." instance=ExtResource( 2 )]
+[node name="tile9" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1117.6, 575 )
 
-[node name="tile10" parent="." instance=ExtResource( 2 )]
+[node name="tile23 2" parent="terrain" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1371.6, 575 )
+
+[node name="tile223" parent="terrain" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1498.6, 575 )
+
+[node name="tile10" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 671.762, 575 )
 
-[node name="tile11" parent="." instance=ExtResource( 2 )]
+[node name="tile11" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 799, 511 )
 
-[node name="tile12" parent="." instance=ExtResource( 2 )]
+[node name="tile12" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 863, 511 )
 
-[node name="tile13" parent="." instance=ExtResource( 2 )]
+[node name="tile13" parent="terrain" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1053.85, 575 )
 
-[node name="tile14" parent="." instance=ExtResource( 4 )]
+[node name="tile23 3" parent="terrain" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1434.85, 575 )
+
+[node name="tile14" parent="terrain" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 735.254, 511 )
 
-[node name="tile15" parent="." instance=ExtResource( 3 )]
+[node name="tile15" parent="terrain" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 927, 511 )
 
-[node name="tile16" parent="." instance=ExtResource( 5 )]
+[node name="tile16" parent="terrain" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 735, 575 )
 
-[node name="tile17" parent="." instance=ExtResource( 6 )]
+[node name="tile17" parent="terrain" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 927, 575 )
 
-[node name="tile18" parent="." instance=ExtResource( 7 )]
+[node name="tile18" parent="terrain" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 799, 575 )
 
-[node name="tile19" parent="." instance=ExtResource( 7 )]
+[node name="tile19" parent="terrain" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 863, 575 )
 
-[node name="tile20" parent="." instance=ExtResource( 8 )]
+[node name="tile20" parent="terrain" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 1181.58, 575 )
+transform/pos = Vector2( 1180.56, 575 )
 
-[node name="tile21" parent="." instance=ExtResource( 9 )]
+[node name="tile21" parent="terrain" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 990, 575 )
 
-[node name="bone1" parent="." instance=ExtResource( 10 )]
+[node name="bone1" parent="terrain" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 799, 575 )
 
-[node name="bone3" parent="." instance=ExtResource( 11 )]
+[node name="bone3" parent="terrain" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 863, 575 )
 
-[node name="tile22" parent="." instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 1470.61, 409.997 )
-
-[node name="tile23" parent="." instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 1239.67, 314.908 )
-
-[node name="tile24" parent="." instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 1470.61, 205.01 )
-
-[node name="tile25" parent="." instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 1533.2, 409.997 )
-
-[node name="tile26" parent="." instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 1302.26, 314.908 )
-
-[node name="tile27" parent="." instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 1533.2, 205.01 )
-
-[node name="male_zombie" parent="." instance=ExtResource( 14 )]
-
-transform/pos = Vector2( 533.835, 509.129 )
-
-[node name="female_zombie" parent="." instance=ExtResource( 15 )]
-
-transform/pos = Vector2( 790.867, 440.637 )
-
-[node name="ninja" parent="." instance=ExtResource( 16 )]
-
-transform/pos = Vector2( 23.0135, 510.272 )
-
-[node name="wall" parent="." instance=ExtResource( 17 )]
+[node name="wall1" parent="terrain" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( -30.0059, 293.535 )
 
-[node name="floor" parent="." instance=ExtResource( 18 )]
+[node name="wall2" parent="terrain" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 518.257, 630.35 )
+transform/pos = Vector2( 2466.25, 308.989 )
+
+[node name="floor" parent="terrain" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 1206.78, 630.35 )
+transform/scale = Vector2( 37.9943, 1 )
+
+[node name="bush2" parent="terrain" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 797.808, 448.001 )
+
+[node name="bush1" parent="terrain" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 31.7216, 499.367 )
+
+[node name="tree" parent="terrain" instance=ExtResource( 16 )]
+
+transform/pos = Vector2( 580.257, 483.288 )
+
+[node name="arrow_sign" parent="terrain" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 905.527, 457.261 )
+
+[node name="skeleton" parent="terrain" instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 251.109, 531.499 )
+
+[node name="tomb_stone1" parent="terrain" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 1079.64, 529.998 )
+
+[node name="male_zombie" parent="." instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 533.835, 509.129 )
+
+[node name="female_zombie" parent="." instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 790.867, 440.637 )
+
+[node name="ninja" parent="." instance=ExtResource( 22 )]
+
+transform/pos = Vector2( 62.8083, 510.272 )
 
 
