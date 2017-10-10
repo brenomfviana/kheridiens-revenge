@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=27 format=1]
 
 [ext_resource path="res://scripts/ninja.gd" type="Script" id=1]
 [ext_resource path="res://assets/ninjaman/Run__000.png" type="Texture" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://assets/ninjaman/Idle__008.png" type="Texture" id=20]
 [ext_resource path="res://assets/ninjaman/Idle__009.png" type="Texture" id=21]
 [ext_resource path="res://assets/ninjaman/Jump__006.png" type="Texture" id=22]
+[ext_resource path="res://scripts/camera.gd" type="Script" id=23]
+[ext_resource path="res://scenes/info.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -47,7 +49,7 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[node name="body" type="KinematicBody2D"]
+[node name="ninja" type="KinematicBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -71,5 +73,37 @@ transform/scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "stopped"
 frame = 3
+
+[node name="camera" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = 0
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 600
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="camera"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="info" parent="camera/CanvasLayer" instance=ExtResource( 24 )]
 
 

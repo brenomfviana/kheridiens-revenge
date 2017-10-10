@@ -5,9 +5,13 @@
 [ext_resource path="res://assets/others/lifebar.png" type="Texture" id=3]
 [ext_resource path="res://assets/ninjaman/Kunai.png" type="Texture" id=4]
 
-[node name="info" type="Node"]
+[node name="info" type="Node2D"]
 
-[node name="lifebar" type="Node" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="lifebar" type="Node2D" parent="."]
 
 [node name="ninja_head" type="Sprite" parent="lifebar"]
 
@@ -56,9 +60,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="itens" type="Node" parent="."]
+[node name="itens" type="Node2D" parent="."]
 
-[node name="kunai" type="Node" parent="itens"]
+[node name="kunai" type="Node2D" parent="itens"]
 
 [node name="sprite" type="Sprite" parent="itens/kunai"]
 
