@@ -1,16 +1,14 @@
-# Qeridien's Revenge
+# Kheridien's Revenge
 
-<p align="center"><img src="img/qeridiens-revenge.png" width="500"/></p>
+<p align="center"><img src="img/kheridiens-revenge.png" width="700"/></p>
 
 ## Description
 
 This is a work from the Mechanics and Balance of Games course.
 
-### About the game
+## Wiki
 
-#### History
-
-Qeridien lived in peace, but left his wife to complete a mission ninja mission. Returning to her house, which was all messed up, she saw only her head on the floor of the room, a zombie head. Anger took hold of his soul and swore to kill all the zombies on the face of the earth.
+See more [here](https://github.com/brenov/kheridiens-revenge/wiki).
 
 ## Team
 
