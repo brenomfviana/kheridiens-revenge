@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/graveyardtilesetnew/BG.png" type="Texture" id=2]
-[ext_resource path="res://assets/ninjaman/Attack__005.png" type="Texture" id=3]
+[ext_resource path="res://assets/ninjaman/Attack__009.png" type="Texture" id=3]
 [ext_resource path="res://assets/zombie/male/Walk__3.png" type="Texture" id=4]
 [ext_resource path="res://assets/zombie/female/Walk__3.png" type="Texture" id=5]
-[ext_resource path="res://samples/regenerator.smp" type="Sample" id=6]
-[ext_resource path="res://scripts/sample_play.gd" type="Script" id=7]
+[ext_resource path="res://fonts/title_font.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://fonts/item_font.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://samples/regenerator.smp" type="Sample" id=8]
+[ext_resource path="res://scripts/sample_play.gd" type="Script" id=9]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -14,7 +16,7 @@ samples/regenerator = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 6 )
+"sample": ExtResource( 8 )
 }
 
 [node name="main" type="Node2D"]
@@ -34,77 +36,96 @@ margin/bottom = 600.0
 
 [node name="background" type="Sprite" parent="panel"]
 
-transform/scale = Vector2( 0.51, 0.525 )
+transform/pos = Vector2( -367.56, -196.368 )
+transform/scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="ninja" type="Sprite" parent="panel/background"]
 
-transform/pos = Vector2( 454.135, 774.52 )
-transform/scale = Vector2( 1.2, 1.2 )
+transform/pos = Vector2( 733.069, 865.444 )
+transform/scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 3 )
 
 [node name="zombie1" type="Sprite" parent="panel/background"]
 
-transform/pos = Vector2( 915.617, 738.3 )
+transform/pos = Vector2( 1079.14, 844.281 )
 transform/scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 4 )
 flip_h = true
 
 [node name="zombie2" type="Sprite" parent="panel/background"]
 
-transform/pos = Vector2( 1248.73, 791.773 )
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( 1347.97, 869.028 )
+transform/scale = Vector2( 0.65, 0.65 )
 texture = ExtResource( 5 )
 flip_h = true
 
 [node name="title" type="Label" parent="panel"]
 
-rect/scale = Vector2( 4, 4 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 373.0
-margin/top = 154.0
-margin/right = 439.0
-margin/bottom = 185.0
-custom_colors/font_color = Color( 0.0547059, 0.0546875, 0.0546875, 1 )
-custom_colors/font_color_shadow = Color( 0.621094, 0.621094, 0.621094, 1 )
-text = "Qeridien's
-  Revenge"
+margin/left = 579.0
+margin/top = 39.0
+margin/right = 989.0
+margin/bottom = 254.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Kheridien's
+Revenge"
+align = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
 [node name="start_game" type="Button" parent="panel"]
 
-rect/scale = Vector2( 3, 3 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 867.0
-margin/top = 275.0
-margin/right = 908.0
-margin/bottom = 295.0
+margin/left = 726.0
+margin/top = 264.0
+margin/right = 946.0
+margin/bottom = 319.0
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Start"
 flat = false
 
-[node name="instructions" type="Button" parent="panel"]
+[node name="load_game" type="Button" parent="panel"]
 
-rect/scale = Vector2( 3, 3 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 723.0
-margin/top = 347.0
-margin/right = 812.0
-margin/bottom = 367.0
+margin/left = 726.0
+margin/top = 327.0
+margin/right = 946.0
+margin/bottom = 382.0
+custom_fonts/font = ExtResource( 7 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Load Game"
+flat = false
+
+[node name="instructions" type="Button" parent="panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 726.0
+margin/top = 390.0
+margin/right = 946.0
+margin/bottom = 445.0
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -113,15 +134,15 @@ flat = false
 
 [node name="credits" type="Button" parent="panel"]
 
-rect/scale = Vector2( 3, 3 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 818.0
-margin/top = 420.0
-margin/right = 875.0
-margin/bottom = 440.0
+margin/left = 726.0
+margin/top = 453.0
+margin/right = 946.0
+margin/bottom = 508.0
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -130,15 +151,15 @@ flat = false
 
 [node name="quit_game" type="Button" parent="panel"]
 
-rect/scale = Vector2( 3, 3 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 868.0
-margin/top = 493.0
-margin/right = 908.0
-margin/bottom = 513.0
+margin/left = 726.0
+margin/top = 515.0
+margin/right = 946.0
+margin/bottom = 570.0
+custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -161,6 +182,6 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
-script/script = ExtResource( 7 )
+script/script = ExtResource( 9 )
 
 
