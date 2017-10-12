@@ -4,14 +4,13 @@
 ###
 extends KinematicBody2D
 
-# Constants
+# Physics constants
 const GRAVITY = 2000.0
-
-# Player
+# Player constants
 const SPEED      = 250
 const JUMP_FORCE = 700
 
-# Animations
+# Animation controllers
 var running
 var stopped
 var jumping
@@ -36,8 +35,6 @@ func _ready():
 
 func _fixed_process(delta):
 	""" Called every frame. """
-	# Ninja Attack
-	#
 	# Ninja movement and jump
 	# Gravity
 	velocity.y += GRAVITY * delta
@@ -45,22 +42,28 @@ func _fixed_process(delta):
 	velocity.x = lerp(velocity.x, SPEED * direction, 0.1)
 	var motion = velocity * delta
 	move(motion)
-	# Cehck if the player is on the ground
+	# Check if the player is on the ground
 	if(is_colliding()):
+		# Can't jump
 		jumping = false
 		velocity.y = 0
 		var normal = get_collision_normal()
-		motion = normal.slide(motion)
-		velocity = normal.slide(velocity)
+		motion     = normal.slide(motion)
+		velocity   = normal.slide(velocity)
 		move(motion)
-	# Animation
+	# Run respective animation
+	get_node("player_sprite").set_offset(Vector2(0, 0))
 	if(jumping && velocity.y != 0):
 		get_node("player_sprite").play("jumping")
 	elif(running):
 		get_node("player_sprite").play("running")
-	#elif(stopped || velocity.x == 0):
 	elif(attacking):
 		get_node("player_sprite").play("attacking")
+		# Check direction
+		if(get_node("player_sprite").is_flipped_h()):
+			get_node("player_sprite").set_offset(Vector2(-110, 20))
+		else:
+			get_node("player_sprite").set_offset(Vector2(120, 20))
 	else:
 		get_node("player_sprite").play("stopped")
 
@@ -93,11 +96,11 @@ func _input(event):
 				#running = false
 				stopped = false
 				jumping = true
-		if(event.is_action_pressed("ui_down")):
-			pass
-		if(event.is_action_pressed("ninja_attack")):
-			attacking = true
-			stopped = false
+		# Check if is not attaking
+		if(!attacking):
+			if(event.is_action_pressed("ninja_attack")):
+				attacking = true
 		if(event.is_action_released("ninja_attack")):
 			attacking = false
-			stopped = true
+		if(event.is_action_pressed("ui_down")):
+			pass
