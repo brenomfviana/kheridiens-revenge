@@ -15,6 +15,7 @@ const JUMP_FORCE = 700
 var running
 var stopped
 var jumping
+var attacking
 # Ninja movement
 var velocity
 var direction
@@ -29,6 +30,7 @@ func _ready():
 	stopped   = true
 	running   = false
 	jumping   = false
+	attacking = false
 	velocity  = Vector2(0, 0)
 	direction = 0
 
@@ -57,6 +59,8 @@ func _fixed_process(delta):
 	elif(running):
 		get_node("player_sprite").play("running")
 	#elif(stopped || velocity.x == 0):
+	elif(attacking):
+		get_node("player_sprite").play("attacking")
 	else:
 		get_node("player_sprite").play("stopped")
 
@@ -91,3 +95,9 @@ func _input(event):
 				jumping = true
 		if(event.is_action_pressed("ui_down")):
 			pass
+		if(event.is_action_pressed("ninja_attack")):
+			attacking = true
+			stopped = false
+		if(event.is_action_released("ninja_attack")):
+			attacking = false
+			stopped = true
