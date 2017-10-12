@@ -1,1 +1,3 @@
-linguist-language=PHP
+*.fnt linguist-language=GDScript
+*.flags linguist-language=GDScript
+*.inc linguist-language=GDScript
