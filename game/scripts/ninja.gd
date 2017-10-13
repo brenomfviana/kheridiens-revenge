@@ -43,7 +43,11 @@ func _fixed_process(delta):
 	var motion = velocity * delta
 	move(motion)
 	# Check if the player is on the ground
+
 	if(is_colliding()):
+		var entity = get_collider()
+		if(entity.get_name() == 'zombie'):
+			print('morreu!')
 		# Can't jump
 		jumping = false
 		velocity.y = 0

@@ -36,6 +36,7 @@ margin/bottom = 600.0
 
 [node name="background" type="Sprite" parent="panel"]
 
+editor/display_folded = true
 transform/pos = Vector2( -367.56, -196.368 )
 transform/scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )

@@ -30,6 +30,7 @@
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
+editor/display_folded = true
 motion/scale = Vector2( 1, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
@@ -55,6 +56,8 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="terrain" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="tile1" parent="terrain" instance=ExtResource( 2 )]
 

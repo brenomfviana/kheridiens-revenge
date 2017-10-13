@@ -14,7 +14,13 @@ var walking
 var velocity
 var direction
 
+var n = 0
+
+func get_name():
+	return ("zombie")
+	
 func _ready():
+	n+=1;
 	# Called every time the node is added to the scene.
 	# Initialization here
 	set_process(true)
@@ -22,6 +28,7 @@ func _ready():
 	velocity  = Vector2(0, 0)
 	direction = 1
 	steps = 0
+	
 	pass
 
 func _process(delta):
