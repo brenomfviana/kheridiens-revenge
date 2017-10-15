@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=1]
 
-[ext_resource path="res://assets/graveyardtilesetnew/BG.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/graveyardtilesetnew/BG.png" type="Texture" id=1]
 [ext_resource path="res://scenes/terrains/tile3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/terrains/tile2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/terrains/tile1.tscn" type="PackedScene" id=4]
@@ -25,6 +25,7 @@
 [ext_resource path="res://scenes/enemies/male_zombie.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/enemies/female_zombie.tscn" type="PackedScene" id=24]
 [ext_resource path="res://scenes/player/ninja.tscn" type="PackedScene" id=25]
+
 
 [node name="phase_one" type="Node"]
 

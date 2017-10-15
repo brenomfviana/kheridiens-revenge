@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/graveyardtilesetnew/BG.png" type="Texture" id=2]
-[ext_resource path="res://assets/ninjaman/Attack__009.png" type="Texture" id=3]
-[ext_resource path="res://assets/zombie/male/Walk__3.png" type="Texture" id=4]
-[ext_resource path="res://assets/zombie/female/Walk__3.png" type="Texture" id=5]
-[ext_resource path="res://fonts/title_font.fnt" type="BitmapFont" id=6]
-[ext_resource path="res://fonts/item_font.fnt" type="BitmapFont" id=7]
-[ext_resource path="res://samples/regenerator.smp" type="Sample" id=8]
-[ext_resource path="res://scripts/sample_play.gd" type="Script" id=9]
+[ext_resource path="res://assets/sprites/graveyardtilesetnew/BG.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__009.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/zombie/male/Walk__3.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/zombie/female/Walk__3.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/title_font.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://assets/fonts/item_font.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://assets/sounds/regenerator.smp" type="Sample" id=8]
+[ext_resource path="res://scripts/intro_song.gd" type="Script" id=9]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -97,7 +97,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Start"
-flat = false
+flat = true
 
 [node name="load_game" type="Button" parent="panel"]
 
@@ -114,7 +114,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Load Game"
-flat = false
+flat = true
 
 [node name="instructions" type="Button" parent="panel"]
 
@@ -131,7 +131,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Instructions"
-flat = false
+flat = true
 
 [node name="credits" type="Button" parent="panel"]
 
@@ -148,7 +148,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Credits"
-flat = false
+flat = true
 
 [node name="quit_game" type="Button" parent="panel"]
 
@@ -165,9 +165,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Quit"
-flat = false
+flat = true
 
-[node name="SamplePlayer" type="SamplePlayer" parent="."]
+[node name="intro_song" type="SamplePlayer" parent="."]
 
 config/polyphony = 1
 config/samples = SubResource( 1 )
