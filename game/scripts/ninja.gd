@@ -19,6 +19,9 @@ var attacking
 var velocity
 var direction
 
+func get_name():
+	return ("ninja")
+
 func _ready():
 	""" Called every time the node is added to the scene.
 	Initialization here. """
@@ -47,7 +50,7 @@ func _fixed_process(delta):
 	if(is_colliding()):
 		var entity = get_collider()
 		if(entity.get_name() == 'zombie'):
-			print('morreu!')
+			print('ninja tocou no zombie!')
 		# Can't jump
 		jumping = false
 		velocity.y = 0

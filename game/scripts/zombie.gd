@@ -24,12 +24,19 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	set_process(true)
+	set_fixed_process(true)
+
 	initial_position = get_pos()
 	velocity  = Vector2(0, 0)
 	direction = 1
 	steps = 0
-	
 	pass
+	
+func _fixed_process(delta):
+	if(is_colliding()):
+		var entity = get_collider()
+		if(entity.get_name() == 'ninja'):
+			print('zombie tocou no ninja!')
 
 func _process(delta):
 	#
