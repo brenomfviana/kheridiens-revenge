@@ -24,20 +24,22 @@ __meta__ = {
 
 [node name="life" type="Sprite" parent="lifebar"]
 
-transform/pos = Vector2( 163.882, 47.4111 )
+transform/pos = Vector2( 90, 35 )
 transform/scale = Vector2( 0.3, 0.3 )
 z/relative = false
 texture = ExtResource( 2 )
+centered = false
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="bar" type="Sprite" parent="lifebar"]
 
-transform/pos = Vector2( 163.882, 47.4111 )
+transform/pos = Vector2( 90, 35 )
 transform/scale = Vector2( 0.3, 0.3 )
 z/relative = false
 texture = ExtResource( 3 )
+centered = false
 __meta__ = {
 "_edit_group_": true
 }

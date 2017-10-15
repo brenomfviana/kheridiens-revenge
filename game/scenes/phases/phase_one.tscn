@@ -26,12 +26,10 @@
 [ext_resource path="res://scenes/enemies/female_zombie.tscn" type="PackedScene" id=24]
 [ext_resource path="res://scenes/player/ninja.tscn" type="PackedScene" id=25]
 
-
-[node name="phase_one" type="Node"]
+[node name="phase_one" type="Node2D"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
 motion/scale = Vector2( 1, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
@@ -51,14 +49,11 @@ scroll/ignore_camera_zoom = true
 
 [node name="Background" type="Sprite" parent="ParallaxLayer/ParallaxBackground"]
 
-transform/pos = Vector2( 1.10797, 1.17899 )
 transform/scale = Vector2( 0.53, 0.53 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="terrain" type="Node2D" parent="."]
-
-editor/display_folded = true
 
 [node name="tile1" parent="terrain" instance=ExtResource( 2 )]
 
@@ -270,7 +265,7 @@ transform/pos = Vector2( 2471.08, 295.325 )
 
 [node name="floor" parent="terrain" instance=ExtResource( 15 )]
 
-transform/pos = Vector2( 1206.78, 630.35 )
+transform/pos = Vector2( 1209.3, 632.762 )
 transform/scale = Vector2( 37.9943, 1 )
 
 [node name="bush2" parent="terrain" instance=ExtResource( 16 )]
