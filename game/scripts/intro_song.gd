@@ -1,4 +1,5 @@
 extends SamplePlayer
-func _ready():
-	play("regenerator")
 
+func _ready():
+	""" . """
+	play("regenerator")
