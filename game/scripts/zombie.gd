@@ -10,6 +10,7 @@ const GRAVITY = 2000.0
 const SPEED     = 15
 const MAX_STEPS = 120
 const DAMAGE    = 5
+const PONTUATION = 10
 
 # Animations
 var initial_position
@@ -47,6 +48,7 @@ func _fixed_process(delta):
 				print("zombie tocou no ninja!")
 				if(entity.attacking):
 					dead = true
+					entity.score += PONTUATION
 				else:
 					entity.life -= DAMAGE
 
@@ -75,3 +77,4 @@ func _process(delta):
 	elif(has_node("hitbox")):
 		get_node("sprite").play("dead")
 		remove_child(get_node("hitbox"))
+		get_node("sprite").set_offset(Vector2(0, 50))
