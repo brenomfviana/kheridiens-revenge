@@ -7,15 +7,11 @@
 
 [node name="info" type="Node2D"]
 
-__meta__ = {
-"_edit_group_": true
-}
-
 [node name="lifebar" type="Node2D" parent="."]
 
 [node name="ninja_head" type="Sprite" parent="lifebar"]
 
-transform/pos = Vector2( 55, 55 )
+transform/pos = Vector2( 55, 56 )
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 __meta__ = {
@@ -62,9 +58,32 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="score" type="Label" parent="lifebar"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 60.0
+margin/right = 239.0
+margin/bottom = 74.0
+text = "0"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="itens" type="Node2D" parent="."]
 
 [node name="kunai" type="Node2D" parent="itens"]
+
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="sprite" type="Sprite" parent="itens/kunai"]
 
@@ -76,7 +95,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="number_of_kunais" type="Label" parent="itens/kunai"]
+[node name="amount_of_kunais" type="Label" parent="itens/kunai"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
