@@ -50,7 +50,7 @@ func _fixed_process(delta):
 					dead = true
 					entity.score += PONTUATION
 				else:
-					entity.life -= DAMAGE
+					entity.current_life -= DAMAGE
 
 func _process(delta):
 	#

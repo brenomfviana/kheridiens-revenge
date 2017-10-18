@@ -26,6 +26,8 @@ var running
 var stopped
 var jumping
 var attacking
+var kunai
+var sword
 
 # Ninja movement
 var velocity
@@ -55,6 +57,8 @@ func _ready():
 	running   = false
 	jumping   = false
 	attacking = false
+	sword     = false
+	kunai     = false
 	velocity  = Vector2(0, 0)
 	direction = 0
 	current_life     = MAX_LIFE
@@ -98,6 +102,8 @@ func _fixed_process(delta):
 				score += entity.PONTUATION
 			else:
 				current_life -= entity.DAMAGE
+		if(entity.get_parent().get_name().is_subsequence_of("floor")):
+			current_life = 0
 		# Can't jump
 		jumping = false
 		velocity.y = 0
@@ -116,16 +122,28 @@ func _fixed_process(delta):
 		get_node("sprite").set_flip_h(true)
 	# Run respective animation
 	if(attacking):
-		get_node("sprite").play("attacking")
-		# Check direction
-		if(get_node("sprite").is_flipped_h()):
-			get_node("a_hitbox").set_pos(Vector2(-50, 0))
-			get_node("sprite").set_offset(Vector2(-110, 20))
-		else:
-			get_node("a_hitbox").set_pos(Vector2(50, 0))
-			get_node("sprite").set_offset(Vector2(120, 20))
-	else:
 		# Prepare ninja attack
+		# With a sword
+		if(sword):
+			get_node("sprite").play("attacking_sword")
+			# Check direction
+			if(get_node("sprite").is_flipped_h()):
+				get_node("a_hitbox").set_pos(Vector2(-50, 0))
+				get_node("sprite").set_offset(Vector2(-110, 20))
+			else:
+				get_node("a_hitbox").set_pos(Vector2(50, 0))
+				get_node("sprite").set_offset(Vector2(120, 20))
+		# With a kunai
+		elif(kunai):
+			get_node("sprite").play("attacking_kunai")
+			# Check direction
+			if(get_node("sprite").is_flipped_h()):
+				pass
+			else:
+				pass
+			kunai = false
+	else:
+		# Reset animation
 		get_node("a_hitbox").set_pos(Vector2(0, 0))
 		if(jumping && velocity.y != 0):
 			get_node("sprite").play("jumping")
@@ -162,9 +180,14 @@ func _input(event):
 				jumping = true
 		# Check if is not attacking
 		if(not attacking):
-			if(event.is_action_pressed("attack")):
+			if(event.is_action_pressed("attack_sword")):
 				attacking = true
-		if(event.is_action_released("attack")):
+				sword     = true
+			if(event.is_action_pressed("attack_kunai")):
+				attacking = true
+				kunai     = true
+		if(event.is_action_released("attack_sword")):
 			attacking = false
+			sword     = false
 		if(event.is_action_pressed("ui_down")):
 			pass
