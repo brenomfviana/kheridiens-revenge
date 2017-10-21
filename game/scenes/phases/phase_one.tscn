@@ -85,7 +85,7 @@ transform/pos = Vector2( 480.678, 575 )
 
 [node name="tile29" parent="terrain" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 1971.18, 575 )
+transform/pos = Vector2( 1926.18, 575 )
 
 [node name="tile7" parent="terrain" instance=ExtResource( 2 )]
 
@@ -109,19 +109,19 @@ transform/pos = Vector2( 1500.19, 575 )
 
 [node name="tile233" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2289.45, 575 )
+transform/pos = Vector2( 2244.45, 575 )
 
 [node name="tile237 2" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2034.45, 575 )
+transform/pos = Vector2( 1989.45, 575 )
 
 [node name="tile236 2" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2667.45, 575 )
+transform/pos = Vector2( 2622.45, 575 )
 
 [node name="tile235 2" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2476.45, 575 )
+transform/pos = Vector2( 2431.45, 575 )
 
 [node name="tile223" parent="terrain" instance=ExtResource( 2 )]
 
@@ -129,27 +129,27 @@ transform/pos = Vector2( 1627.19, 575 )
 
 [node name="tile224" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2416.45, 575 )
+transform/pos = Vector2( 2371.45, 575 )
 
 [node name="tile228" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2161.45, 575 )
+transform/pos = Vector2( 2116.45, 575 )
 
 [node name="tile229" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2225.45, 575 )
+transform/pos = Vector2( 2180.45, 575 )
 
 [node name="tile226" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2794.45, 575 )
+transform/pos = Vector2( 2749.45, 575 )
 
 [node name="tile227" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2858.45, 575 )
+transform/pos = Vector2( 2813.45, 575 )
 
 [node name="tile225" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2603.45, 575 )
+transform/pos = Vector2( 2558.45, 575 )
 
 [node name="tile10" parent="terrain" instance=ExtResource( 2 )]
 
@@ -173,19 +173,19 @@ transform/pos = Vector2( 1563.44, 575 )
 
 [node name="tile234" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2352.7, 575 )
+transform/pos = Vector2( 2307.7, 575 )
 
 [node name="tile237" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2097.7, 575 )
+transform/pos = Vector2( 2052.7, 575 )
 
 [node name="tile236" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2730.7, 575 )
+transform/pos = Vector2( 2685.7, 575 )
 
 [node name="tile235" parent="terrain" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 2539.7, 575 )
+transform/pos = Vector2( 2494.7, 575 )
 
 [node name="tile14" parent="terrain" instance=ExtResource( 4 )]
 
@@ -261,7 +261,7 @@ transform/pos = Vector2( -30.0059, 293.535 )
 
 [node name="wall2" parent="terrain" instance=ExtResource( 14 )]
 
-transform/pos = Vector2( 2471.08, 295.325 )
+transform/pos = Vector2( 2463.67, 307.913 )
 
 [node name="floor" parent="terrain" instance=ExtResource( 15 )]
 
@@ -286,15 +286,15 @@ transform/pos = Vector2( 1523.63, 499.544 )
 
 [node name="tree" parent="terrain" instance=ExtResource( 18 )]
 
-transform/pos = Vector2( 2659.53, 484.174 )
+transform/pos = Vector2( 2614.53, 484.174 )
 
 [node name="arrow_sign" parent="terrain" instance=ExtResource( 19 )]
 
-transform/pos = Vector2( 2350.37, 521.892 )
+transform/pos = Vector2( 2305.37, 521.892 )
 
 [node name="skeleton" parent="terrain" instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 2578.31, 532.211 )
+transform/pos = Vector2( 2533.31, 532.211 )
 
 [node name="tomb_stone1" parent="terrain" instance=ExtResource( 21 )]
 
@@ -302,11 +302,11 @@ transform/pos = Vector2( 888.061, 466.119 )
 
 [node name="crate" parent="terrain" instance=ExtResource( 22 )]
 
-transform/pos = Vector2( 1058.93, 516.878 )
+transform/pos = Vector2( 1061.45, 516.878 )
 
 [node name="crate1" parent="terrain" instance=ExtResource( 22 )]
 
-transform/pos = Vector2( 1683.34, 516.878 )
+transform/pos = Vector2( 246.504, 516.746 )
 
 [node name="male_zombie" parent="." instance=ExtResource( 23 )]
 
@@ -322,7 +322,7 @@ transform/pos = Vector2( 1512.31, 508.282 )
 
 [node name="male_zombie3" parent="." instance=ExtResource( 23 )]
 
-transform/pos = Vector2( 2222.02, 509.931 )
+transform/pos = Vector2( 2177.02, 509.931 )
 
 [node name="female_zombie" parent="." instance=ExtResource( 24 )]
 
@@ -330,11 +330,11 @@ transform/pos = Vector2( 790.867, 440.637 )
 
 [node name="female_zombie3" parent="." instance=ExtResource( 24 )]
 
-transform/pos = Vector2( 2113.37, 504.97 )
+transform/pos = Vector2( 2068.37, 504.97 )
 
 [node name="female_zombie2" parent="." instance=ExtResource( 24 )]
 
-transform/pos = Vector2( 2006.86, 504.802 )
+transform/pos = Vector2( 1961.86, 504.802 )
 
 [node name="female_zombie1" parent="." instance=ExtResource( 24 )]
 

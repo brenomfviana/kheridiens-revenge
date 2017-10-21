@@ -30,7 +30,8 @@ centered = false
 
 [node name="ninja_sprite" type="Sprite" parent="panel/background"]
 
-transform/pos = Vector2( 1035.6, 428.886 )
+transform/pos = Vector2( 985.012, 538.172 )
+transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="game_over" type="Label" parent="panel"]

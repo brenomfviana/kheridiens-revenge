@@ -1,6 +1,7 @@
 ###
 # This script is responsible for main game menu.
-# Author Breno Viana
+# Author: Breno Viana
+# Version: 20/10/2017
 ###
 extends Node2D
 
@@ -8,6 +9,7 @@ func _ready():
 	""" Called every time the node is added to the scene.
 		Initialization here. """
 	set_process(true)
+	get_node("intro_song").play("regenerator")
 
 func _process(delta):
 	""" Called every frame. Check the interactions with the menu. """

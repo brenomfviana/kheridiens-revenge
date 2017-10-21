@@ -1,6 +1,7 @@
 ###
 # This script is responsible for game over menu.
-# Author Breno Viana
+# Author: Breno Viana
+# Version: 20/10/2017
 ###
 extends Node2D
 

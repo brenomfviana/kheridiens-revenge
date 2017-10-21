@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=10 format=1]
 
-[ext_resource path="res://scripts/menu.gd" type="Script" id=1]
+[ext_resource path="res://scripts/menus/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/graveyardtilesetnew/BG.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/ninjaman/Attack__009.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/zombie/male/Walk__3.png" type="Texture" id=4]
@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/fonts/title_font.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://assets/fonts/item_font.fnt" type="BitmapFont" id=7]
 [ext_resource path="res://assets/sounds/regenerator.smp" type="Sample" id=8]
-[ext_resource path="res://scripts/intro_song.gd" type="Script" id=9]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -157,9 +156,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 726.0
-margin/top = 515.0
+margin/top = 516.0
 margin/right = 946.0
-margin/bottom = 570.0
+margin/bottom = 571.0
 custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -183,6 +182,5 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
-script/script = ExtResource( 9 )
 
 
