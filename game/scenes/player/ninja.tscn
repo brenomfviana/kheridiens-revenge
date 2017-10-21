@@ -1,6 +1,6 @@
-[gd_scene load_steps=47 format=1]
+[gd_scene load_steps=48 format=1]
 
-[ext_resource path="res://scripts/ninja.gd" type="Script" id=1]
+[ext_resource path="res://scripts/player/ninja.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/ninjaman/Run__000.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/ninjaman/Run__001.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/ninjaman/Run__002.png" type="Texture" id=4]
@@ -42,19 +42,15 @@
 [ext_resource path="res://assets/sprites/ninjaman/Attack__007.png" type="Texture" id=40]
 [ext_resource path="res://assets/sprites/ninjaman/Attack__008.png" type="Texture" id=41]
 [ext_resource path="res://assets/sprites/ninjaman/Attack__009.png" type="Texture" id=42]
-[ext_resource path="res://scenes/player/info.tscn" type="PackedScene" id=43]
+[ext_resource path="res://scripts/player/sword.gd" type="Script" id=43]
+[ext_resource path="res://scenes/player/info.tscn" type="PackedScene" id=44]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
@@ -75,7 +71,7 @@ animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
 "loop": false,
 "name": "attacking_kunai",
-"speed": 20.0
+"speed": 60.0
 }, {
 "frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
 "loop": true,
@@ -83,15 +79,17 @@ animations = [ {
 "speed": 20.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
 [node name="ninja" type="KinematicBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1.28331, 0, 0, 3.26906, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 2 )
-shapes/1/transform = Matrix32( 1, 0, 0, 2.79901, 0, 0 )
-shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
@@ -100,7 +98,7 @@ script/script = ExtResource( 1 )
 [node name="sprite" type="AnimatedSprite" parent="."]
 
 transform/scale = Vector2( 0.15, 0.15 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "stopped"
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
@@ -110,15 +108,34 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="a_hitbox" type="CollisionShape2D" parent="."]
+[node name="sword" type="Area2D" parent="."]
 
-transform/scale = Vector2( 1, 2.79901 )
-shape = SubResource( 2 )
+editor/display_folded = true
+transform/scale = Vector2( 0.313777, 0.889657 )
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 3.18698, 0, 0, 3.14617, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 43 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="hitbox" type="CollisionShape2D" parent="sword"]
+
+transform/scale = Vector2( 3.18698, 3.14617 )
+shape = SubResource( 3 )
 trigger = false
-_update_shape_index = 1
+_update_shape_index = 0
 
 [node name="camera" type="Camera2D" parent="."]
 
+editor/display_folded = true
+transform/pos = Vector2( 0, -2 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -146,6 +163,6 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="info" parent="camera/canvas_layer" instance=ExtResource( 43 )]
+[node name="info" parent="camera/canvas_layer" instance=ExtResource( 44 )]
 
 

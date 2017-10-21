@@ -22,15 +22,13 @@ var dead
 var velocity
 var direction
 
-func get_name():
-	""" Get scene name. """
-	return ("zombie")
-
 func _ready():
 	""" Called every time the node is added to the scene.
 		Initialization here. """
+	# Set processes
 	set_process(true)
 	set_fixed_process(true)
+	# Initialize values
 	initial_position = get_pos()
 	velocity  = Vector2(0, 0)
 	direction = 1
@@ -38,24 +36,13 @@ func _ready():
 	dead      = false
 	stopped   = false
 	walking   = false
-	pass
-
-func _fixed_process(delta):
-	if(not dead):
-		if(is_colliding()):
-			var entity = get_collider()
-			if(entity.get_name() == "ninja"):
-				print("zombie tocou no ninja!")
-				if(entity.attacking):
-					dead = true
-					entity.score += PONTUATION
-				else:
-					entity.current_life -= DAMAGE
+	# Add to enemies group
+	add_to_group("enemies")
 
 func _process(delta):
-	#
+	# Check if the zombie is not dead
 	if(not dead):
-		#
+		# Zombie movement
 		if(get_pos().x <= initial_position.x and direction == -1):
 			get_node("sprite").set_flip_h(false)
 			direction = 1
