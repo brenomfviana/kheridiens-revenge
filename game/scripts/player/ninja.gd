@@ -133,6 +133,7 @@ func _fixed_process(delta):
 		# With a sword
 		if(sword):
 			get_node("sprite").play("attacking_sword")
+			get_node("sound").play("sword")
 			# Check direction
 			if(get_node("sprite").is_flipped_h()):
 				get_node("sword").set_pos(Vector2(-50, 0))

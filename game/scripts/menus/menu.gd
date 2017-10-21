@@ -9,7 +9,7 @@ func _ready():
 	""" Called every time the node is added to the scene.
 		Initialization here. """
 	set_process(true)
-	get_node("intro_song").play("regenerator")
+	get_node("intro_song").play("intro")
 
 func _process(delta):
 	""" Called every frame. Check the interactions with the menu. """
