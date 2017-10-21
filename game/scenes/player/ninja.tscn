@@ -50,7 +50,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
@@ -98,7 +98,7 @@ script/script = ExtResource( 1 )
 [node name="sprite" type="AnimatedSprite" parent="."]
 
 transform/scale = Vector2( 0.15, 0.15 )
-frames = SubResource( 2 )
+frames = SubResource( 4 )
 animation = "stopped"
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
@@ -135,7 +135,6 @@ _update_shape_index = 0
 [node name="camera" type="Camera2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 0, -2 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -164,5 +163,12 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 
 [node name="info" parent="camera/canvas_layer" instance=ExtResource( 44 )]
+
+[node name="invincibility_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 

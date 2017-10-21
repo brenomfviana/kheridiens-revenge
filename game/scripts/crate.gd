@@ -39,7 +39,7 @@ func _input(event):
 		if(event.is_action_pressed("ui_down") and (not already_opened)
 			and on_the_crate):
 				already_opened = true
-				entity.amount_of_kunais += 5
+				Globals.set("amount_of_kunais", Globals.get("amount_of_kunais") + 5)
 
 func _on_body_enter(body):
 	""" Called when a body entered the crate. """
