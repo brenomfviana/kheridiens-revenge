@@ -44,7 +44,7 @@ transform/pos = Vector2( 1191.93, 835 )
 texture = ExtResource( 3 )
 flip_h = true
 
-[node name="label" type="Label" parent="panel"]
+[node name="title" type="Label" parent="panel"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true

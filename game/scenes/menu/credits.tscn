@@ -45,7 +45,7 @@ centered = false
 transform/pos = Vector2( 904.801, 558.773 )
 texture = ExtResource( 3 )
 
-[node name="label" type="Label" parent="panel"]
+[node name="title" type="Label" parent="panel"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
