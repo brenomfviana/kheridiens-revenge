@@ -120,7 +120,6 @@ _update_shape_index = 0
 
 [node name="sword" type="Area2D" parent="."]
 
-editor/display_folded = true
 transform/scale = Vector2( 0.313777, 0.889657 )
 input/pickable = true
 shapes/0/shape = SubResource( 3 )

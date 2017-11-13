@@ -1,6 +1,7 @@
 ###
 # This script is responsible for zombie behaviors.
 # Author Breno Viana
+# Version: 13/11/2017
 ###
 extends KinematicBody2D
 
@@ -27,7 +28,6 @@ func _ready():
 		Initialization here. """
 	# Set processes
 	set_process(true)
-	set_fixed_process(true)
 	# Initialize values
 	initial_position = get_pos()
 	velocity  = Vector2(0, 0)
