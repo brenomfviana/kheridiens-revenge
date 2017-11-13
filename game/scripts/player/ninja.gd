@@ -1,7 +1,7 @@
 ###
 # This script is responsible for ninja behaviors.
 # Author: Breno Viana
-# Version: 20/10/2017
+# Version: 12/11/2017
 ###
 extends KinematicBody2D
 
@@ -60,10 +60,10 @@ func _ready():
 	invencible = false
 	velocity  = Vector2(0, 0)
 	direction = 0
-	current_life     = MAX_LIFE
+	current_life = MAX_LIFE
 	# Get current phase
 	current_phase = get_parent().get_name()
-	#
+	# 
 	get_node("sprite").connect("finished", self, "_on_anim_finished")
 	get_node("invincibility_timer").connect("timeout", self, "_on_invincibility_timer_timeout")
 
@@ -109,19 +109,16 @@ func _fixed_process(delta):
 				current_life -= entity.DAMAGE
 				invencible = true
 				get_node("invincibility_timer").start()
-		if(entity.get_parent().get_name().is_subsequence_of("floor")):
+		if(entity.get_parent().get_name().is_subsequence_of("abyss")):
 			current_life = 0
-		# Can't jump
-		jumping = false
-		velocity.y = 0
+		if("tile".is_subsequence_of(entity.get_parent().get_name())):
+			jumping = false
+			velocity.y = 0
 		# Movement
 		var normal = get_collision_normal()
 		motion     = normal.slide(motion)
 		velocity   = normal.slide(velocity)
 		move(motion)
-	# Run respective animation
-	# Set default values
-	get_node("sprite").set_offset(Vector2(0, 0))
 	# Choose the direction
 	if(direction == 1):
 		get_node("sprite").set_flip_h(false)
@@ -129,7 +126,6 @@ func _fixed_process(delta):
 		get_node("sprite").set_flip_h(true)
 	# Run respective animation
 	if(attacking):
-		# Prepare ninja attack
 		# With a sword
 		if(sword):
 			get_node("sprite").play("attacking_sword")
@@ -141,6 +137,7 @@ func _fixed_process(delta):
 			else:
 				get_node("sword").set_pos(Vector2(50, 0))
 				get_node("sprite").set_offset(Vector2(120, 20))
+			sword = false
 		# With a kunai
 		elif(kunai and (Globals.get("amount_of_kunais") > 0)):
 			# Use a kunai
@@ -150,15 +147,23 @@ func _fixed_process(delta):
 			# Create kunai
 			add_child(load("res://scenes/player/kunai.tscn").instance())
 			kunai = false
-	else:
-		# Reset animation
-		get_node("sword").set_pos(Vector2(0, 0))
-		if(jumping && velocity.y != 0):
-			get_node("sprite").play("jumping")
-		elif(running):
-			get_node("sprite").play("running")
-		else:
-			get_node("sprite").play("stopped")
+	elif(jumping):
+		get_node("sprite").play("jumping")
+	elif(running):
+		get_node("sprite").play("running")
+	elif(not running):
+		get_node("sprite").play("stopped")
+
+func _on_anim_finished():
+	""" Called when an animation finishes. """
+	# Next animation
+	get_node("sprite").play("stopped")
+	# End attaking
+	attacking = false
+	# Reset animation
+	get_node("sword").set_pos(Vector2(0, 0))
+	# Set default values
+	get_node("sprite").set_offset(Vector2(0, 0))
 
 func _input(event):
 	""" Get user input and set the values corresponding to the expected
@@ -197,13 +202,7 @@ func _input(event):
 				attacking = true
 				kunai     = true
 		if(event.is_action_released("attack_sword")):
-			attacking = false
 			sword     = false
-
-func _on_anim_finished():
-	""" Called when an animation finishes. """
-	get_node("sprite").play("stopped")
-	attacking = false
 
 func _on_invincibility_timer_timeout():
 	""" Called when the invincibility time ends. """

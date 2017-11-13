@@ -14,7 +14,7 @@
 [ext_resource path="res://scenes/terrains/bone1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/terrains/bone3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/terrains/wall.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/terrains/floor.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/terrains/abyss.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/terrains/bush2.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/terrains/bush1.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/terrains/tree.tscn" type="PackedScene" id=18]
@@ -264,7 +264,7 @@ transform/pos = Vector2( -30.0059, 293.535 )
 
 transform/pos = Vector2( 2463.67, 307.913 )
 
-[node name="floor" parent="terrain" instance=ExtResource( 15 )]
+[node name="abyss" parent="terrain" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1209.3, 632.762 )
 transform/scale = Vector2( 37.9943, 1 )
@@ -299,7 +299,7 @@ transform/pos = Vector2( 2533.31, 532.211 )
 
 [node name="tomb_stone1" parent="terrain" instance=ExtResource( 21 )]
 
-transform/pos = Vector2( 888.061, 466.119 )
+transform/pos = Vector2( 888.061, 469.119 )
 
 [node name="crate" parent="terrain" instance=ExtResource( 22 )]
 
