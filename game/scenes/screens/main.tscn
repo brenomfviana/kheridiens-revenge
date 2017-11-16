@@ -81,7 +81,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="start_game" type="Button" parent="panel"]
+[node name="new_game" type="Button" parent="panel"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -95,7 +95,7 @@ custom_fonts/font = ExtResource( 7 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Start"
+text = "New Game"
 flat = true
 
 [node name="load_game" type="Button" parent="panel"]

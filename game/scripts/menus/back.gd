@@ -1,7 +1,7 @@
 ###
-# This script is responsible for main game menu.
+# This script is responsible for back button function.
 # Author: Breno Viana
-# Version: 20/10/2017
+# Version: 16/11/2017
 ###
 extends Node2D
 
@@ -13,6 +13,6 @@ func _ready():
 
 func _process(delta):
 	""" Called every frame. Check the interactions with the menu. """
-	# Start game
+	# Check if the back button was pressed
 	if(get_node("panel/back").is_pressed()):
-		get_tree().change_scene("res://scenes/main.tscn")
+		get_tree().change_scene("res://scenes/screens/main.tscn")

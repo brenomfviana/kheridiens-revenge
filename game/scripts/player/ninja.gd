@@ -1,7 +1,7 @@
 ###
 # This script is responsible for ninja behaviors.
 # Author: Breno Viana
-# Version: 12/11/2017
+# Version: 15/11/2017
 ###
 extends KinematicBody2D
 
@@ -9,6 +9,8 @@ extends KinematicBody2D
 
 # INFO
 const LIFE_BAR_SCALE = 0.3
+# Current phase
+var current_phase
 
 ################################################################################
 
@@ -22,9 +24,6 @@ const MAX_LIFE   = 100
 
 ################################################################################
 
-# Current phase
-var current_phase
-
 # Ninja states controllers
 var deading
 var dead
@@ -35,11 +34,9 @@ var attacking
 var kunai
 var sword
 var invencible
-
 # Ninja movement
 var velocity
 var direction
-
 # Ninja attributes
 var current_life
 
@@ -228,9 +225,9 @@ func _on_deading_timer_timeout():
 	Globals.set("number_of_lifes", Globals.get("number_of_lifes") - 1)
 	# Check number of lifes
 	if(Globals.get("number_of_lifes") <= 0):
-		get_tree().change_scene("res://scenes/game_over.tscn")
+		get_tree().change_scene("res://scenes/screens/game_over.tscn")
 	else:
-		get_tree().change_scene("res://scenes/phases/" + current_phase + ".tscn")
+		get_tree().change_scene("res://scenes/levels/" + current_phase + ".tscn")
 	dead = false
 
 func _on_invincibility_timer_timeout():

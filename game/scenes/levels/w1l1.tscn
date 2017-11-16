@@ -27,7 +27,7 @@
 [ext_resource path="res://scenes/player/ninja.tscn" type="PackedScene" id=25]
 [ext_resource path="res://scenes/sounds/phase_sound.tscn" type="PackedScene" id=26]
 
-[node name="phase_one" type="Node2D"]
+[node name="w1l1" type="Node2D"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 

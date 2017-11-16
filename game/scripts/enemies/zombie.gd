@@ -1,9 +1,11 @@
 ###
 # This script is responsible for zombie behaviors.
 # Author Breno Viana
-# Version: 13/11/2017
+# Version: 16/11/2017
 ###
 extends KinematicBody2D
+
+################################################################################
 
 # Physics constants
 const GRAVITY = 2000.0
@@ -13,15 +15,21 @@ const MAX_STEPS = 120
 const DAMAGE    = 5
 const PONTUATION = 10
 
-# Animations
-var initial_position
-var steps
+################################################################################
+
+# Ninja states controllers
 var stopped
 var walking
 var dead
 # Zombie movement
+var initial_position
+var steps
 var velocity
 var direction
+# Zombie attributes
+var current_life
+
+################################################################################
 
 func _ready():
 	""" Called every time the node is added to the scene.
