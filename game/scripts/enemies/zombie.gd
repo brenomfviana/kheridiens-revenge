@@ -40,28 +40,32 @@ func _ready():
 	add_to_group("enemies")
 
 func _process(delta):
-	# Check if the zombie is not dead
-	if(not dead):
-		# Zombie movement
-		if(get_pos().x <= initial_position.x and direction == -1):
-			get_node("sprite").set_flip_h(false)
-			direction = 1
-		elif(get_pos().x >= (initial_position.x + MAX_STEPS)
-				and direction == 1):
-			get_node("sprite").set_flip_h(true)
-			direction = -1
-		# Gravity
-		velocity.y += GRAVITY * delta
-		get_node("sprite").play("walking")
-		velocity.x = lerp(velocity.x, SPEED * direction, 0.1)
-		var motion = velocity * delta
-		move(motion)
-		if(is_colliding()):
-			var normal = get_collision_normal()
-			velocity = normal.slide(velocity)
+	# Check if the game is paused
+	if(Globals.get("paused")):
+		get_node("sprite").stop();
+	if(not Globals.get("paused")):
+		# Check if the zombie is not dead
+		if(not dead):
+			# Zombie movement
+			if(get_pos().x <= initial_position.x and direction == -1):
+				get_node("sprite").set_flip_h(false)
+				direction = 1
+			elif(get_pos().x >= (initial_position.x + MAX_STEPS)
+					and direction == 1):
+				get_node("sprite").set_flip_h(true)
+				direction = -1
+			# Gravity
+			velocity.y += GRAVITY * delta
+			get_node("sprite").play("walking")
+			velocity.x = lerp(velocity.x, SPEED * direction, 0.1)
 			var motion = velocity * delta
 			move(motion)
-	elif(has_node("hitbox")):
-		get_node("sprite").play("dead")
-		remove_child(get_node("hitbox"))
-		get_node("sprite").set_offset(Vector2(0, 50))
+			if(is_colliding()):
+				var normal = get_collision_normal()
+				velocity = normal.slide(velocity)
+				var motion = velocity * delta
+				move(motion)
+		elif(has_node("hitbox")):
+			get_node("sprite").play("dead")
+			remove_child(get_node("hitbox"))
+			get_node("sprite").set_offset(Vector2(0, 50))

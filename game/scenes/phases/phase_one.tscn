@@ -266,7 +266,7 @@ transform/pos = Vector2( 2463.67, 307.913 )
 
 [node name="abyss" parent="terrain" instance=ExtResource( 15 )]
 
-transform/pos = Vector2( 1209.3, 632.762 )
+transform/pos = Vector2( 1209.3, 703.762 )
 transform/scale = Vector2( 37.9943, 1 )
 
 [node name="bush2" parent="terrain" instance=ExtResource( 16 )]

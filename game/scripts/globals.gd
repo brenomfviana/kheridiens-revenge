@@ -8,6 +8,9 @@ extends Node2D
 func _ready():
     """ Called every time the node is added to the scene.
 		Initialization here. """
+    # Game settings
+    Globals.set("paused", false)
+    # Enemies settings
     Globals.set("enemy_group", "enemies")
     # Player attributes
     Globals.set("score", 0)

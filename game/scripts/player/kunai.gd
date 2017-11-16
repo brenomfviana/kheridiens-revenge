@@ -35,11 +35,13 @@ func _ready():
 	connect("body_enter", self, "_on_body_enter")
 
 func _fixed_process(delta):
-	""" . """
-	# Kunai movement
-	var move = get_pos()
-	move.x += 10 * direction
-	set_pos(move)
+	""" Called every frame. """
+	# Check if the game is paused
+	if(not Globals.get("paused")):
+		# Kunai movement
+		var move = get_pos()
+		move.x += 10 * direction
+		set_pos(move)
 
 func _on_body_enter(body):
 	""" Called when a body entered the crate. """
