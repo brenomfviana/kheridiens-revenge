@@ -14,4 +14,4 @@ func _ready():
 func _process(delta):
 	# Check if the game is paused
 	if(Globals.get("paused")):
-		add_child(load("res://scenes/screens/pause_screen.tscn").instance())
+		add_child(load("res://scenes/screens/pause_screen.tscn").instance	())

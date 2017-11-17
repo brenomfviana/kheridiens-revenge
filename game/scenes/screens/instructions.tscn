@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/fonts/menu_text.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://assets/sounds/intro.wav" type="Sample" id=7]
 
-
 [sub_resource type="SampleLibrary" id=1]
 
 samples/intro = {
@@ -127,6 +126,22 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="label11" type="Label" parent="panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 380.0
+margin/top = 165.0
+margin/right = 530.0
+margin/bottom = 202.0
+custom_fonts/font = ExtResource( 5 )
+text = "Pause game"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="label10" type="Label" parent="panel"]
 
 focus/ignore_mouse = true
@@ -203,6 +218,22 @@ margin/right = 434.0
 margin/bottom = 342.0
 custom_fonts/font = ExtResource( 6 )
 text = "S"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="label11 2" type="Label" parent="panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 420.0
+margin/top = 215.0
+margin/right = 434.0
+margin/bottom = 247.0
+custom_fonts/font = ExtResource( 6 )
+text = "Enter"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
