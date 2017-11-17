@@ -1,6 +1,6 @@
 # Kheridien's Revenge
 
-<p align="center"><img src="img/kheridiens-revenge.png" width="700"/></p>
+<p align="center"><img src="img/game.png" width="700"/></p>
 
 ## Description
 
@@ -9,6 +9,18 @@ This is a work from the Mechanics and Balance of Games course.
 ## Wiki
 
 See more [here](https://github.com/brenov/kheridiens-revenge/wiki).
+
+## More images
+
+<p align="center"><img src="img/game_paused.png" width="700"/></p>
+
+<p align="center"><img src="img/main_menu.png" width="700"/></p>
+
+<p align="center"><img src="img/instructions.png" width="700"/></p>
+
+<p align="center"><img src="img/load_game.png" width="700"/></p>
+
+<p align="center"><img src="img/credits.png" width="700"/></p>
 
 ## Team
 
