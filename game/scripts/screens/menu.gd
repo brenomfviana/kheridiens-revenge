@@ -8,8 +8,8 @@ extends Node2D
 func _ready():
 	""" Called every time the node is added to the scene.
 		Initialization here. """
-	set_process(true)
 	get_node("intro_song").play("intro")
+	set_process(true)
 
 func _process(delta):
 	""" Called every frame. Check the interactions with the menu. """

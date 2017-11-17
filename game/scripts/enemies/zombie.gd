@@ -37,6 +37,7 @@ func _ready():
 	# Set processes
 	set_process(true)
 	# Initialize values
+	current_life = 50
 	initial_position = get_pos()
 	velocity  = Vector2(0, 0)
 	direction = 1
@@ -53,6 +54,8 @@ func _process(delta):
 		get_node("sprite").stop();
 	if(not Globals.get("paused")):
 		# Check if the zombie is not dead
+		if(current_life <= 0):
+			dead = true
 		if(not dead):
 			# Zombie movement
 			if(get_pos().x <= initial_position.x and direction == -1):
@@ -74,6 +77,9 @@ func _process(delta):
 				var motion = velocity * delta
 				move(motion)
 		elif(has_node("hitbox")):
+			if(get_node("sprite").is_flipped_h()):
+				get_node("sprite").set_offset(Vector2(-180, 45))
+			else:
+				get_node("sprite").set_offset(Vector2(180, 45))
 			get_node("sprite").play("dead")
 			remove_child(get_node("hitbox"))
-			get_node("sprite").set_offset(Vector2(0, 50))

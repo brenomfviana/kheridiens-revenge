@@ -212,9 +212,10 @@ func _input(event):
 			if(event.is_action_pressed("attack_sword")):
 				attacking = true
 				sword     = true
-			if(event.is_action_pressed("attack_kunai")):
-				attacking = true
-				kunai     = true
+			if(event.is_action_pressed("attack_kunai") 
+				and (Globals.get("amount_of_kunais") > 0)):
+					attacking = true
+					kunai     = true
 		if(event.is_action_released("attack_sword")):
 			sword     = false
 		if(event.is_action_pressed("ui_accept")):

@@ -1,12 +1,13 @@
 [gd_scene load_steps=9 format=1]
 
-[ext_resource path="res://scripts/menus/load_game.gd" type="Script" id=1]
+[ext_resource path="res://scripts/screens/load_game.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/graveyardtilesetnew/BG.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/ninjaman/Jump_Attack__006.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/zombie/male/Attack__2.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/menu_title.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://assets/fonts/item_font.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://assets/sounds/intro.wav" type="Sample" id=7]
+
 
 [sub_resource type="SampleLibrary" id=1]
 

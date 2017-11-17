@@ -299,7 +299,7 @@ transform/pos = Vector2( 2533.31, 532.211 )
 
 [node name="tomb_stone1" parent="terrain" instance=ExtResource( 21 )]
 
-transform/pos = Vector2( 888.061, 469.119 )
+transform/pos = Vector2( 888.061, 465.5 )
 
 [node name="crate" parent="terrain" instance=ExtResource( 22 )]
 

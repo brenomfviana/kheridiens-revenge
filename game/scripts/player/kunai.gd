@@ -54,6 +54,6 @@ func _on_body_enter(body):
 		# Check if the enemy is not dead
 		if(not body.dead):
 			Globals.set("score", Globals.get("score") + body.PONTUATION)
-			body.dead = true
+			body.current_life -= damage
 	# Delete this kunai
 	queue_free()

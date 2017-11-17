@@ -1,33 +1,33 @@
 [gd_scene load_steps=49 format=1]
 
 [ext_resource path="res://scripts/enemies/zombie.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__1.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__2.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__3.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__4.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__5.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__6.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__7.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__8.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__9.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__10.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__11.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__12.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__13.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__14.png" type="Texture" id=15]
-[ext_resource path="res://assets/sprites/zombie/male/Idle__15.png" type="Texture" id=16]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__1.png" type="Texture" id=17]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__2.png" type="Texture" id=18]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__3.png" type="Texture" id=19]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__4.png" type="Texture" id=20]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__5.png" type="Texture" id=21]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__6.png" type="Texture" id=22]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__7.png" type="Texture" id=23]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__8.png" type="Texture" id=24]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__9.png" type="Texture" id=25]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__10.png" type="Texture" id=26]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__11.png" type="Texture" id=27]
-[ext_resource path="res://assets/sprites/zombie/male/Dead__12.png" type="Texture" id=28]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__3.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__4.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__5.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__6.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__7.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__8.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__9.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__10.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__11.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/zombie/male/Dead__12.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__1.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__2.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__3.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__4.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__5.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__6.png" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__7.png" type="Texture" id=20]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__8.png" type="Texture" id=21]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__9.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__10.png" type="Texture" id=23]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__11.png" type="Texture" id=24]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__12.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__13.png" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__14.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/zombie/male/Idle__15.png" type="Texture" id=28]
 [ext_resource path="res://assets/sprites/zombie/male/Walk__1.png" type="Texture" id=29]
 [ext_resource path="res://assets/sprites/zombie/male/Walk__2.png" type="Texture" id=30]
 [ext_resource path="res://assets/sprites/zombie/male/Walk__3.png" type="Texture" id=31]
@@ -55,15 +55,15 @@ extents = Vector2( 11.4339, 10.1111 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "stopped",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": false,
 "name": "dead",
 "speed": 7.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "stopped",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": true,
@@ -93,7 +93,6 @@ transform/pos = Vector2( 0, -3 )
 transform/scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
 animation = "stopped"
-frame = 14
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 
