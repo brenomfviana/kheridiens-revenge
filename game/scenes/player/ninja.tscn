@@ -32,26 +32,26 @@
 [ext_resource path="res://assets/sprites/ninjaman/Idle__008.png" type="Texture" id=30]
 [ext_resource path="res://assets/sprites/ninjaman/Idle__009.png" type="Texture" id=31]
 [ext_resource path="res://assets/sprites/ninjaman/Jump__006.png" type="Texture" id=32]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__000.png" type="Texture" id=33]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__001.png" type="Texture" id=34]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__002.png" type="Texture" id=35]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__003.png" type="Texture" id=36]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__004.png" type="Texture" id=37]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__005.png" type="Texture" id=38]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__006.png" type="Texture" id=39]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__007.png" type="Texture" id=40]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__008.png" type="Texture" id=41]
-[ext_resource path="res://assets/sprites/ninjaman/Throw__009.png" type="Texture" id=42]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__000.png" type="Texture" id=43]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__001.png" type="Texture" id=44]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__002.png" type="Texture" id=45]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__003.png" type="Texture" id=46]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__004.png" type="Texture" id=47]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__005.png" type="Texture" id=48]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__006.png" type="Texture" id=49]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__007.png" type="Texture" id=50]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__008.png" type="Texture" id=51]
-[ext_resource path="res://assets/sprites/ninjaman/Attack__009.png" type="Texture" id=52]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__000.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__001.png" type="Texture" id=34]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__002.png" type="Texture" id=35]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__003.png" type="Texture" id=36]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__004.png" type="Texture" id=37]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__005.png" type="Texture" id=38]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__006.png" type="Texture" id=39]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__007.png" type="Texture" id=40]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__008.png" type="Texture" id=41]
+[ext_resource path="res://assets/sprites/ninjaman/Attack__009.png" type="Texture" id=42]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__000.png" type="Texture" id=43]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__001.png" type="Texture" id=44]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__002.png" type="Texture" id=45]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__003.png" type="Texture" id=46]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__004.png" type="Texture" id=47]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__005.png" type="Texture" id=48]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__006.png" type="Texture" id=49]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__007.png" type="Texture" id=50]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__008.png" type="Texture" id=51]
+[ext_resource path="res://assets/sprites/ninjaman/Throw__009.png" type="Texture" id=52]
 [ext_resource path="res://scripts/player/sword.gd" type="Script" id=53]
 [ext_resource path="res://scenes/player/info.tscn" type="PackedScene" id=54]
 [ext_resource path="res://assets/sounds/sword.wav" type="Sample" id=55]
@@ -86,13 +86,13 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
 "loop": false,
-"name": "attacking_kunai",
-"speed": 60.0
+"name": "attacking_sword",
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
 "loop": false,
-"name": "attacking_sword",
-"speed": 20.0
+"name": "attacking_kunai",
+"speed": 60.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]

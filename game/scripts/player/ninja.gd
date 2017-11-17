@@ -1,7 +1,7 @@
 ###
 # This script is responsible for ninja behaviors.
 # Author: Breno Viana
-# Version: 15/11/2017
+# Version: 16/11/2017
 ###
 extends KinematicBody2D
 
@@ -192,40 +192,42 @@ func _input(event):
 		behavior. """
 	# Check event type
 	if(event.type == InputEvent.KEY):
-		# Check key pressed
-		if(event.is_action_pressed("ui_right")):
-			direction = 1
-			running   = true
-			stopped   = false
-		if(event.is_action_released("ui_right")):
-			direction = 0
-			running   = false
-			stopped   = true
-		if(event.is_action_pressed("ui_left")):
-			direction = -1
-			running   = true
-			stopped   = false
-		if(event.is_action_released("ui_left")):
-			direction = 0
-			running   = false
-			stopped   = true
-		# Check if is not jumping
-		if(not jumping):
-			if(event.is_action_pressed("ui_up")):
-				velocity.y -= JUMP_FORCE
-				stopped = false
-				jumping = true
-		# Check if is not attacking
-		if(not attacking):
-			if(event.is_action_pressed("attack_sword")):
-				attacking = true
-				sword     = true
-			if(event.is_action_pressed("attack_kunai") 
-				and (Globals.get("amount_of_kunais") > 0)):
+		# Check if the game is not paused
+		if(not Globals.get("paused")):
+			# Check key pressed
+			if(event.is_action_pressed("ui_right")):
+				direction = 1
+				running   = true
+				stopped   = false
+			if(event.is_action_released("ui_right")):
+				direction = 0
+				running   = false
+				stopped   = true
+			if(event.is_action_pressed("ui_left")):
+				direction = -1
+				running   = true
+				stopped   = false
+			if(event.is_action_released("ui_left")):
+				direction = 0
+				running   = false
+				stopped   = true
+			# Check if is not jumping
+			if(not jumping):
+				if(event.is_action_pressed("ui_up")):
+					velocity.y -= JUMP_FORCE
+					stopped = false
+					jumping = true
+			# Check if is not attacking
+			if(not attacking):
+				if(event.is_action_pressed("attack_sword")):
 					attacking = true
-					kunai     = true
-		if(event.is_action_released("attack_sword")):
-			sword     = false
+					sword     = true
+				if(event.is_action_pressed("attack_kunai") 
+					and (Globals.get("amount_of_kunais") > 0)):
+						attacking = true
+						kunai     = true
+			if(event.is_action_released("attack_sword")):
+				sword = false
 		if(event.is_action_pressed("ui_accept")):
 			Globals.set("paused", not Globals.get("paused"))
 

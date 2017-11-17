@@ -1,7 +1,7 @@
 ###
 # This script is responsible for main game menu.
 # Author: Breno Viana
-# Version: 16/12/2017
+# Version: 16/11/2017
 ###
 extends Node2D
 
