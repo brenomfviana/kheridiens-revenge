@@ -15,4 +15,8 @@ func _on_body_enter(body):
 	""" Called when a body entered the crate. """
 	# Check if the ninja enter the arrow sign
 	if(body.get_name() == "ninja"):
+		# Get attributes
+		Globals.set("score", body.score)
+		Globals.set("amount_of_kunais", body.amount_of_kunais)
+		# Change level
 		get_tree().change_scene("res://scenes/screens/credits.tscn")

@@ -53,7 +53,10 @@ func _on_body_enter(body):
 	if(body.is_in_group(Globals.get("enemy_group"))):
 		# Check if the enemy is not dead
 		if(not body.dead):
-			Globals.set("score", Globals.get("score") + body.PONTUATION)
+			body.under_attack = true
 			body.current_life -= damage
+			# Check if the enemy has died
+			if(body.current_life <= 0):
+				get_parent().score += body.PONTUATION
 	# Delete this kunai
 	queue_free()

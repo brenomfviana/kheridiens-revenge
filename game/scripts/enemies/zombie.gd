@@ -20,6 +20,7 @@ const PONTUATION = 10
 # Ninja states controllers
 var stopped
 var walking
+var under_attack
 var dead
 # Zombie movement
 var initial_position
@@ -36,23 +37,33 @@ func _ready():
 		Initialization here. """
 	# Set processes
 	set_process(true)
-	# Initialize values
+	# Initialize states values
+	stopped      = false
+	walking      = false
+	under_attack = false
+	dead         = false
+	# Initilize movement values
+	direction = 1
+	steps     = 0
+	# Initialize attributes
 	current_life = 50
 	initial_position = get_pos()
 	velocity  = Vector2(0, 0)
-	direction = 1
-	steps     = 0
-	dead      = false
-	stopped   = false
-	walking   = false
 	# Add to enemies group
-	add_to_group("enemies")
+	add_to_group(Globals.get("enemy_group"))
+	# Connect behavior when finish the time of death animation
+	get_node("under_attack_timer").connect("timeout", self, "_on_under_attack_timer_timeout")
 
 func _process(delta):
 	# Check if the game is paused
 	if(Globals.get("paused")):
 		get_node("sprite").stop();
 	if(not Globals.get("paused")):
+		# Check if the zombis is under attack
+		if(under_attack):
+			get_node("sprite").set_modulate(Color(1, 0.5, 0.5))
+			get_node("under_attack_timer").start()
+			under_attack = false
 		# Check if the zombie is not dead
 		if(current_life <= 0):
 			dead = true
@@ -83,3 +94,7 @@ func _process(delta):
 				get_node("sprite").set_offset(Vector2(180, 45))
 			get_node("sprite").play("dead")
 			remove_child(get_node("hitbox"))
+
+func _on_under_attack_timer_timeout():
+	""" Called when the under attack time ends. """
+	get_node("sprite").set_modulate(Color(1, 1, 1))

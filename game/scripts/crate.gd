@@ -1,7 +1,7 @@
 ###
 # This script is responsible for crate behaviors.
 # Author: Breno Viana
-# Version: 20/10/2017
+# Version: 16/11/2017
 ###
 extends Area2D
 
@@ -39,7 +39,7 @@ func _input(event):
 		if(event.is_action_pressed("ui_down") and (not already_opened)
 			and on_the_crate):
 				already_opened = true
-				Globals.set("amount_of_kunais", Globals.get("amount_of_kunais") + 5)
+				entity.amount_of_kunais += 5
 
 func _on_body_enter(body):
 	""" Called when a body entered the crate. """

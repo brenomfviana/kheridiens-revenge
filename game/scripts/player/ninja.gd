@@ -39,6 +39,8 @@ var velocity
 var direction
 # Ninja attributes
 var current_life
+var amount_of_kunais
+var score
 
 ################################################################################
 
@@ -49,7 +51,7 @@ func _ready():
 	set_process(true)
 	set_fixed_process(true)
 	set_process_input(true)
-	# Initialize values
+	# Initialize states values
 	deading    = false
 	dead       = false
 	stopped    = true
@@ -59,14 +61,20 @@ func _ready():
 	sword      = false
 	kunai      = false
 	invencible = false
+	# Initilize movement values
 	velocity   = Vector2(0, 0)
 	direction  = 0
-	current_life = MAX_LIFE
+	# Initialize attributes
+	current_life     = MAX_LIFE
+	amount_of_kunais = Globals.get("amount_of_kunais")
+	score            = Globals.get("score")
 	# Get current phase
 	current_phase = get_parent().get_name()
-	# 
+	# Connect behavior when finish animation
 	get_node("sprite").connect("finished", self, "_on_anim_finished")
+	# Connect behavior when finish the time of invencibility
 	get_node("invincibility_timer").connect("timeout", self, "_on_invincibility_timer_timeout")
+	# Connect behavior when finish the time of death animation
 	get_node("deading_timer").connect("timeout", self, "_on_deading_timer_timeout")
 
 func _process(delta):
@@ -79,10 +87,10 @@ func _process(delta):
 	nf.set_text("x " + str(Globals.get("number_of_lifes")))
 	# Update amount of kunais
 	var info = get_node("camera/canvas_layer/info/itens/kunai/amount_of_kunais")
-	info.set_text("x " + str(Globals.get("amount_of_kunais")))
+	info.set_text("x " + str(amount_of_kunais))
 	# Update score
 	var info = get_node("camera/canvas_layer/info/lifebar/score")
-	info.set_text(str(Globals.get("score")))
+	info.set_text(str(score))
 
 func _fixed_process(delta):
 	""" Called every frame. Ninja behaviors. """
@@ -153,9 +161,9 @@ func _fixed_process(delta):
 						get_node("sprite").set_offset(Vector2(120, 20))
 					sword = false
 				# With a kunai
-				elif(kunai and (Globals.get("amount_of_kunais") > 0)):
+				elif(kunai and (amount_of_kunais > 0)):
 					# Use a kunai
-					Globals.set("amount_of_kunais", Globals.get("amount_of_kunais") - 1)
+					amount_of_kunais -= 1;
 					# Run animation
 					get_node("sprite").play("attacking_kunai")
 					# Create kunai
