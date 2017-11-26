@@ -8,6 +8,8 @@
 
 [node name="game_over" type="Node2D"]
 
+transform/pos = Vector2( 0, 14.0453 )
+transform/scale = Vector2( 2, 2 )
 script/script = ExtResource( 1 )
 
 [node name="panel" type="Panel" parent="."]

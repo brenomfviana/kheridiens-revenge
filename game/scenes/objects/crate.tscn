@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.6307, 26.3789 )
+extents = Vector2( 50.0777, 50.0108 )
 
 [node name="crate" type="Area2D"]
 
@@ -31,7 +31,6 @@ _update_shape_index = 0
 
 [node name="sprite" type="Sprite" parent="."]
 
-transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 

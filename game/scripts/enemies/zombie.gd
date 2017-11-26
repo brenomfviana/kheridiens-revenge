@@ -10,8 +10,8 @@ extends KinematicBody2D
 # Physics constants
 const GRAVITY = 2000.0
 # Zombie constants
-const SPEED     = 15
-const MAX_STEPS = 120
+const SPEED     = 30
+const MAX_STEPS = 240
 const DAMAGE    = 5
 const PONTUATION = 10
 

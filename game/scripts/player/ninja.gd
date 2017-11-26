@@ -18,8 +18,8 @@ var current_phase
 const GRAVITY = 2000.0
 
 # Player constants
-const SPEED      = 250
-const JUMP_FORCE = 750
+const SPEED      = 500
+const JUMP_FORCE = 1050
 const MAX_LIFE   = 100
 
 ################################################################################
@@ -222,14 +222,16 @@ func _input(event):
 				if(event.is_action_pressed("attack_sword")):
 					attacking = true
 					sword     = true
-				if(event.is_action_pressed("attack_kunai") 
-					and (Globals.get("amount_of_kunais") > 0)):
+				if(event.is_action_pressed("attack_kunai") and (amount_of_kunais > 0)):
 						attacking = true
 						kunai     = true
 			if(event.is_action_released("attack_sword")):
 				sword = false
+			if(event.is_action_released("attack_kunai")):
+				kunai = false
 		if(event.is_action_pressed("ui_accept")):
 			Globals.set("paused", not Globals.get("paused"))
+			get_node("camera/canvas_layer/info").add_child(load("res://scenes/screens/pause_screen.tscn").instance())
 
 func _on_deading_timer_timeout():
 	""" Called when the dead animation time ends. """

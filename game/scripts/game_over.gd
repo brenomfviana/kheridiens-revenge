@@ -14,4 +14,4 @@ func _process(delta):
 	""" Called every frame. Check the interactions with the menu. """
 	# Start game
 	if(get_node("panel/back").is_pressed()):
-		get_tree().change_scene("res://scenes/levels/main.tscn")
+		get_tree().change_scene("res://scenes/screens/main.tscn")

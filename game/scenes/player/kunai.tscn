@@ -10,6 +10,7 @@ extents = Vector2( 15.8438, 3.10333 )
 
 [node name="kunai" type="Area2D"]
 
+transform/scale = Vector2( 2, 2 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )

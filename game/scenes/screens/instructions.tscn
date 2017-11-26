@@ -19,6 +19,7 @@ samples/intro = {
 
 [node name="instructions" type="Node2D"]
 
+transform/scale = Vector2( 2, 2 )
 script/script = ExtResource( 1 )
 
 [node name="panel" type="Panel" parent="."]

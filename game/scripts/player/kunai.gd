@@ -44,7 +44,7 @@ func _fixed_process(delta):
 	if(not Globals.get("paused")):
 		# Kunai movement
 		var move = get_pos()
-		move.x  += 10 * direction
+		move.x  += 20 * direction
 		set_pos(move)
 
 func _on_body_enter(body):
@@ -58,5 +58,6 @@ func _on_body_enter(body):
 			# Check if the enemy has died
 			if(body.current_life <= 0):
 				get_parent().score += body.PONTUATION
-	# Delete this kunai
-	queue_free()
+	if(body.get_name() != "ninja"):
+		# Delete this kunai
+		queue_free()
