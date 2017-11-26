@@ -10,7 +10,7 @@ extends KinematicBody2D
 # Physics constants
 const GRAVITY = 2000.0
 # Zombie constants
-const SPEED     = 30
+var SPEED     = (randi() % 80) + 20
 const MAX_STEPS = 240
 const DAMAGE    = 5
 const PONTUATION = 10
@@ -51,6 +51,15 @@ func _ready():
 	velocity  = Vector2(0, 0)
 	# Add to enemies group
 	add_to_group(Globals.get("enemy_group"))
+	
+	# Add to enemies group [2]
+	if(Globals.is_persisting("enemis")):
+		Globals.get("enemis").append(self)
+	else:
+		Globals.set("enemis",[])
+		Globals.get("enemis").append(self)
+	
+	
 	# Connect behavior when finish the time of death animation
 	get_node("under_attack_timer").connect("timeout", self, "_on_under_attack_timer_timeout")
 
@@ -83,10 +92,22 @@ func _process(delta):
 			var motion = velocity * delta
 			move(motion)
 			if(is_colliding()):
+				#Check for collision between zombies
+				var entity = get_collider()
+				if(Globals.get("enemis").has(entity)):
+					print (self, entity)
+					if(direction == -1):
+						get_node("sprite").set_flip_h(false)
+						direction = 1
+					else:
+						get_node("sprite").set_flip_h(true)
+						direction = -1
+				
 				var normal = get_collision_normal()
 				velocity = normal.slide(velocity)
 				var motion = velocity * delta
 				move(motion)
+				
 		elif(has_node("hitbox")):
 			if(get_node("sprite").is_flipped_h()):
 				get_node("sprite").set_offset(Vector2(-180, 45))
