@@ -229,7 +229,7 @@ func _input(event):
 				sword = false
 			if(event.is_action_released("attack_kunai")):
 				kunai = false
-		if(event.is_action_pressed("ui_accept")):
+		if(event.is_action_pressed("ui_space")):
 			Globals.set("paused", not Globals.get("paused"))
 			get_node("camera/canvas_layer/info").add_child(load("res://scenes/screens/pause_screen.tscn").instance())
 

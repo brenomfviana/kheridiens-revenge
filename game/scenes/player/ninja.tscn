@@ -1,36 +1,36 @@
 [gd_scene load_steps=60 format=1]
 
 [ext_resource path="res://scripts/player/ninja.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__000.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__001.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__002.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__003.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__004.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__005.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__006.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__007.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__008.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/ninjaman/Dead__009.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/ninjaman/Run__000.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/ninjaman/Run__001.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/ninjaman/Run__002.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/ninjaman/Run__003.png" type="Texture" id=15]
-[ext_resource path="res://assets/sprites/ninjaman/Run__004.png" type="Texture" id=16]
-[ext_resource path="res://assets/sprites/ninjaman/Run__005.png" type="Texture" id=17]
-[ext_resource path="res://assets/sprites/ninjaman/Run__006.png" type="Texture" id=18]
-[ext_resource path="res://assets/sprites/ninjaman/Run__007.png" type="Texture" id=19]
-[ext_resource path="res://assets/sprites/ninjaman/Run__008.png" type="Texture" id=20]
-[ext_resource path="res://assets/sprites/ninjaman/Run__009.png" type="Texture" id=21]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__000.png" type="Texture" id=22]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__001.png" type="Texture" id=23]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__002.png" type="Texture" id=24]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__003.png" type="Texture" id=25]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__004.png" type="Texture" id=26]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__005.png" type="Texture" id=27]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__006.png" type="Texture" id=28]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__007.png" type="Texture" id=29]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__008.png" type="Texture" id=30]
-[ext_resource path="res://assets/sprites/ninjaman/Idle__009.png" type="Texture" id=31]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__000.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__001.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__002.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__003.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__004.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__005.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__006.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__007.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__008.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/ninjaman/Idle__009.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__000.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__001.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__002.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__003.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__004.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__005.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__006.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__007.png" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__008.png" type="Texture" id=20]
+[ext_resource path="res://assets/sprites/ninjaman/Dead__009.png" type="Texture" id=21]
+[ext_resource path="res://assets/sprites/ninjaman/Run__000.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/ninjaman/Run__001.png" type="Texture" id=23]
+[ext_resource path="res://assets/sprites/ninjaman/Run__002.png" type="Texture" id=24]
+[ext_resource path="res://assets/sprites/ninjaman/Run__003.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/ninjaman/Run__004.png" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/ninjaman/Run__005.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/ninjaman/Run__006.png" type="Texture" id=28]
+[ext_resource path="res://assets/sprites/ninjaman/Run__007.png" type="Texture" id=29]
+[ext_resource path="res://assets/sprites/ninjaman/Run__008.png" type="Texture" id=30]
+[ext_resource path="res://assets/sprites/ninjaman/Run__009.png" type="Texture" id=31]
 [ext_resource path="res://assets/sprites/ninjaman/Jump__006.png" type="Texture" id=32]
 [ext_resource path="res://assets/sprites/ninjaman/Attack__000.png" type="Texture" id=33]
 [ext_resource path="res://assets/sprites/ninjaman/Attack__001.png" type="Texture" id=34]
@@ -65,19 +65,19 @@ extents = Vector2( 10, 10 )
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "stopped",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": false,
 "name": "deading",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "running",
 "speed": 25.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
-"loop": true,
-"name": "stopped",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 32 ) ],
 "loop": true,
@@ -111,6 +111,7 @@ samples/sword = {
 
 [node name="ninja" type="KinematicBody2D"]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 3.4, 0, 0, 6.6, 0, 0 )
