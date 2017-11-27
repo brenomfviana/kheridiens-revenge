@@ -63,6 +63,30 @@ func _ready():
 	# Connect behavior when finish the time of death animation
 	get_node("under_attack_timer").connect("timeout", self, "_on_under_attack_timer_timeout")
 
+#Calcule distance between zombie and ninja
+func get_distance_to_ninja():
+	return abs(self.get_global_pos().distance_to(Globals.get("ninja_position")))
+
+func below_ninja():
+	var dist = abs(get_global_pos()[1] - Globals.get("ninja_position")[1])
+	#print (dist, " - ", get_distance_to_ninja())
+	return get_distance_to_ninja() < 300 and dist > 100
+
+func front_to_ninja():
+	#If zombie is facing left, looking for ninja
+	var case1 = get_global_pos()[0] - Globals.get("ninja_position")[0]>0 and direction == -1 
+	#If zombie is facing right, looking for ninja
+	var case2 = get_global_pos()[0] - Globals.get("ninja_position")[0]<0 and direction == 1
+	return (case1 or case2)
+
+func rotate():
+	if(direction == -1):
+		get_node("sprite").set_flip_h(false)
+		direction = 1
+	else:
+		get_node("sprite").set_flip_h(true)
+		direction = -1
+
 func _process(delta):
 	# Check if the game is paused
 	if(Globals.get("paused")):
@@ -77,54 +101,40 @@ func _process(delta):
 		if(current_life <= 0):
 			dead = true
 		if(not dead):
+			
+		 #If one of the previous cases is true and the distance is the minimum established
+			#if(get_distance_to_ninja() < 300 and front_to_ninja()):
+			#	get_node("sprite").play("attack")
+				#get_node("sound").play("zombie_attack")
+		
+			if(not below_ninja() and get_distance_to_ninja() < 300 and (not front_to_ninja())):
+				rotate()
 			# Zombie movement
-			if(get_pos().x <= initial_position.x and direction == -1):
+			elif(get_pos().x <= initial_position.x and direction == -1 and get_distance_to_ninja() > 300):
 				get_node("sprite").set_flip_h(false)
 				direction = 1
 			elif(get_pos().x >= (initial_position.x + MAX_STEPS)
-					and direction == 1):
+					and direction == 1 and get_distance_to_ninja() > 300):
 				get_node("sprite").set_flip_h(true)
 				direction = -1
+			elif(is_colliding()):
+				#Check for collision between zombies
+				var entity = get_collider()
+				if(Globals.get("enemis").has(entity) and get_distance_to_ninja() > 300):
+					#print (self, entity)
+					rotate()
+				
+				var normal = get_collision_normal()
+				velocity = normal.slide(velocity)
+				var motion = velocity * delta
+				move(motion)
+
 			# Gravity
 			velocity.y += GRAVITY * delta
 			get_node("sprite").play("walking")
 			velocity.x = lerp(velocity.x, SPEED * direction, 0.1)
 			var motion = velocity * delta
 			move(motion)
-			if(is_colliding()):
-				#Check for collision between zombies
-				var entity = get_collider()
-				if(Globals.get("enemis").has(entity)):
-					#print (self, entity)
-					if(direction == -1):
-						get_node("sprite").set_flip_h(false)
-						direction = 1
-					else:
-						get_node("sprite").set_flip_h(true)
-						direction = -1
-				
-				var normal = get_collision_normal()
-				velocity = normal.slide(velocity)
-				var motion = velocity * delta
-				move(motion)
-				
-			#Calcule distance between zombie and ninja
-			var x = self.get_global_pos().distance_to(Globals.get("ninja_position"))
-			#If zombie is facing left, looking for ninja
-			var case1 = get_global_pos()[0] - Globals.get("ninja_position")[0]>0 and direction == -1 
-			#If zombie is facing right, looking for ninja
-			var case2 = get_global_pos()[0] - Globals.get("ninja_position")[0]<0 and direction == 1
-			#If one of the previous cases is true and the distance is the minimum established
-			if(x < 200 and (case1 or case2)):
-				get_node("sprite").play("attack")
-				#get_node("sound").play("zombie_attack")
-			elif(x < 200):
-				if(direction == -1):
-					get_node("sprite").set_flip_h(false)
-					direction = 1
-				else:
-					get_node("sprite").set_flip_h(true)
-					direction = -1
 				
 				
 		elif(has_node("hitbox")):
