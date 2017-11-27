@@ -95,7 +95,7 @@ func _process(delta):
 				#Check for collision between zombies
 				var entity = get_collider()
 				if(Globals.get("enemis").has(entity)):
-					print (self, entity)
+					#print (self, entity)
 					if(direction == -1):
 						get_node("sprite").set_flip_h(false)
 						direction = 1
@@ -107,6 +107,25 @@ func _process(delta):
 				velocity = normal.slide(velocity)
 				var motion = velocity * delta
 				move(motion)
+				
+			#Calcule distance between zombie and ninja
+			var x = self.get_global_pos().distance_to(Globals.get("ninja_position"))
+			#If zombie is facing left, looking for ninja
+			var case1 = get_global_pos()[0] - Globals.get("ninja_position")[0]>0 and direction == -1 
+			#If zombie is facing right, looking for ninja
+			var case2 = get_global_pos()[0] - Globals.get("ninja_position")[0]<0 and direction == 1
+			#If one of the previous cases is true and the distance is the minimum established
+			if(x < 200 and (case1 or case2)):
+				get_node("sprite").play("attack")
+				#get_node("sound").play("zombie_attack")
+			elif(x < 200):
+				if(direction == -1):
+					get_node("sprite").set_flip_h(false)
+					direction = 1
+				else:
+					get_node("sprite").set_flip_h(true)
+					direction = -1
+				
 				
 		elif(has_node("hitbox")):
 			if(get_node("sprite").is_flipped_h()):

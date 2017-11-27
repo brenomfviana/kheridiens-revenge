@@ -76,7 +76,9 @@ func _ready():
 	get_node("invincibility_timer").connect("timeout", self, "_on_invincibility_timer_timeout")
 	# Connect behavior when finish the time of death animation
 	get_node("deading_timer").connect("timeout", self, "_on_deading_timer_timeout")
-
+	# Set Ninja ponsition
+	Globals.set("ninja_position", get_global_pos())
+	
 func _process(delta):
 	""" Called every frame. Update info. """
 	# Update info
@@ -141,6 +143,8 @@ func _fixed_process(delta):
 				motion     = normal.slide(motion)
 				velocity   = normal.slide(velocity)
 				move(motion)
+				# Set Ninja ponsition
+				Globals.set("ninja_position", get_global_pos())
 			# Choose the direction
 			if(direction == 1):
 				get_node("sprite").set_flip_h(false)
