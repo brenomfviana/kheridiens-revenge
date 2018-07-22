@@ -1,6 +1,6 @@
 # Kheridien's Revenge
 
-<p align="center"><img src="img/game.png" width="700"/></p>
+![Kheridien's Revenge](img/game.png)
 
 ## Description
 
@@ -12,15 +12,16 @@ See more [here](https://github.com/brenov/kheridiens-revenge/wiki).
 
 ## More images
 
-<p align="center"><img src="img/game_paused.png" width="700"/></p>
-
-<p align="center"><img src="img/main_menu.png" width="700"/></p>
-
-<p align="center"><img src="img/instructions.png" width="700"/></p>
-
-<p align="center"><img src="img/load_game.png" width="700"/></p>
-
-<p align="center"><img src="img/credits.png" width="700"/></p>
+<div style="margin: 0 auto; max-width: 250px;">
+  <p align="center">
+    <img src="img/main_menu.png" width="425"/>
+    <img src="img/instructions.png" width="425"/>
+    <img src="img/game.png" width="425"/>
+    <img src="img/game_paused.png" width="425"/>
+    <img src="img/load_game.png" width="425"/>
+    <img src="img/credits.png" width="425"/>
+  </p>
+</div>
 
 ## Team
 
