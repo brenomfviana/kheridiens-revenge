@@ -27,6 +27,6 @@ Kheridien received an extremely important and urgent mission. To go complete it,
 
 ## Team
 
-[<img src="https://avatars2.githubusercontent.com/u/17532418?v=3&s=400" width="100"/>](https://github.com/brenov) | [<img src="https://avatars2.githubusercontent.com/u/8813353?v=3&s=400" width="100"/>](https://github.com/Barbalho12)
+[<img src="https://avatars2.githubusercontent.com/u/17532418?v=3&s=400" width="100"/>](https://github.com/brenomfviana) | [<img src="https://avatars2.githubusercontent.com/u/8813353?v=3&s=400" width="100"/>](https://github.com/Barbalho12)
 ---|---
-[Breno Viana](https://github.com/brenov) | [Felipe Barbalho](https://github.com/Barbalho12)
+[Breno Viana](https://github.com/brenomfviana) | [Felipe Barbalho](https://github.com/Barbalho12)
